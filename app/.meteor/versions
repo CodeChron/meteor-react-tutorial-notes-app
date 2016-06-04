@@ -32,6 +32,7 @@ http@1.1.5
 id-map@1.0.7
 insecure@1.0.7
 jquery@1.11.8
+kadira:flow-router@2.12.1
 launch-screen@1.0.11
 livedata@1.0.18
 logging@1.0.12
@@ -51,6 +52,7 @@ observe-sequence@1.0.11
 ordered-dict@1.0.7
 promise@0.6.7
 random@1.0.9
+reactive-dict@1.1.7
 reactive-var@1.0.9
 reload@1.1.8
 retry@1.0.7
