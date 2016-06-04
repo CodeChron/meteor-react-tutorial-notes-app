@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const AppLayout = (props) => <div>{props.content(props)}</div>
+export const AppLayout = (props) => <div id="app-container">{props.content(props)}</div>
