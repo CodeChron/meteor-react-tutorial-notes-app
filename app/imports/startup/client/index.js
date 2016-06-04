@@ -1,2 +1,3 @@
 import '/imports/stylesheets/main'
-import './main.js'
+import './routes'
+
