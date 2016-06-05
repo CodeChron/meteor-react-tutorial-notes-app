@@ -11,3 +11,17 @@ export const Note = Class.create({
     updatedAt: Date 
   }
 })
+
+Meteor.methods({
+
+	'/note/create': (title) => {
+      const note = new Note()
+			note.set({
+			  title,
+			  updatedAt: new Date()
+			})
+			note.save()
+			return note
+  }
+
+})
