@@ -10,7 +10,10 @@ export const Homepage = (props) => {
   return <div id="app-container" className="l-app-full-height l-app-centered">
            <AppHeader middleCol={pageTitle} />
            <div id="main-content">
-             <SingleFieldSubmit placeholder={"New Note..."} />
+             <SingleFieldSubmit
+               handleSubmit={props.handleCreateNote}
+               placeholder={"New Note..."}
+             />
            </div>
          </div>	
 }
