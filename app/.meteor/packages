@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 fourseven:scss
 seba:minifiers-autoprefixer
 kadira:flow-router
+jagi:astronomy

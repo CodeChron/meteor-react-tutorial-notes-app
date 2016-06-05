@@ -1,0 +1,1 @@
+import { Note } from '/imports/collections/notes'
