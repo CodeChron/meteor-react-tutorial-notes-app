@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ThreeColumnLayout = (props) => {
+export const AppHeader = (props) => {
 
 	return  <div className="flex-row-centered">
 	          <div className="flex-left-right-icons">{props.leftCol}</div>
@@ -9,7 +9,7 @@ export const ThreeColumnLayout = (props) => {
 	        </div>
 }
 
-ThreeColumnLayout.propTypes = {
+AppHeader.propTypes = {
   leftCol: React.PropTypes.object,
   middleCol: React.PropTypes.object,
   rightCol: React.PropTypes.object

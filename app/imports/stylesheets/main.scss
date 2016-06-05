@@ -1,4 +1,34 @@
+// VARIABLES, MIXINS, and HELPERS
+// Variables and functions we might use across multiple stylesheets
+// __________________________________________________________________
 @import "variables";
-@import "normalize";
-@import "app_container";
 
+
+// NORMALIZE/RESET
+// "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
+// __________________________________________________________________
+@import "normalize";
+
+
+//BASE
+//Styles applied directly to HTML selectors
+// __________________________________________________________________
+@import "base";
+
+
+//LAYOUT
+//Define one or more page layouts
+// __________________________________________________________________
+@import "layout";
+
+
+//COMPONENTS 
+//This combines 'modules' and 'state' in SMACCS. We organize it this way so our stylesheets can be aligned with our React components
+// __________________________________________________________________
+// Nothing added here yet
+
+
+//THEME 
+//Define color, typography, etc. 
+// __________________________________________________________________
+// Nothing added here yet
