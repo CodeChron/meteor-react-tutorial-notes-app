@@ -2,6 +2,7 @@ import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
 import { SingleFieldSubmit } from '../forms/single_field_submit'
+import { List } from '../lists/list'
 
 export const Homepage = (props) => {
 
@@ -14,6 +15,7 @@ export const Homepage = (props) => {
                handleSubmit={props.handleCreateNote}
                placeholder={"New Note..."}
              />
+             <List collection={props.notes} />
            </div>
          </div>	
 }
