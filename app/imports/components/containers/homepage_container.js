@@ -5,16 +5,16 @@ import { App } from '../app'
 export default createContainer(
 	() => {
 		
-		const handleCreateNote = (title) => {
-			Meteor.call('/note/create', title, (err, result) => {
-        if (err) {
-          console.log('error: ' + err.reason)
-        }
-      })
-	  }
+		// const handleCreateNote = (title) => {
+		// 	Meteor.call('/note/create', title, (err, result) => {
+  //       if (err) {
+  //         console.log('error: ' + err.reason)
+  //       }
+  //     })
+	 //  }
 
 	  return {
-      handleCreateNote,
+      
       placeholder: "New Note..."
 	  }
   },
