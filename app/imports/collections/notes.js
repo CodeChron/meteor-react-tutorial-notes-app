@@ -1,4 +1,5 @@
 import { Mongo } from 'meteor/mongo'
+import { Meteor } from 'meteor/meteor'
 import { Class } from 'meteor/jagi:astronomy'
 
 const Notes = new Mongo.Collection('notes')
