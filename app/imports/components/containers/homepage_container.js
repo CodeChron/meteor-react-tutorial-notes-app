@@ -6,17 +6,16 @@ export default createContainer(
 	() => {
 		
 		const handleCreateNote = (title) => {
-			const note = new Note()
-			note.set({
-				title,
-			  updatedAt: new Date()
-			})
-			note.save()
-		cont  }
+			Meteor.call('/note/create', title, (err, result) => {
+        if (err) {
+          console.log('error: ' + err.reason)
+        }
+      })
+	  }
 
 	  return {
-	  	handleSubmit: handleCreateNote,
-        placeholder: "New Note..."
+      handleCreateNote,
+      placeholder: "New Note..."
 	  }
   },
   App
