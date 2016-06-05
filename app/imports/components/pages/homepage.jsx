@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
+import { SingleFieldSubmit } from '../forms/single_field_submit'
 
 export const Homepage = (props) => {
 
@@ -9,7 +10,7 @@ export const Homepage = (props) => {
   return <div id="app-container" className="l-app-full-height l-app-centered">
            <AppHeader middleCol={pageTitle} />
            <div id="main-content">
-             {"Homepage content goes here"}
+             <SingleFieldSubmit placeholder={"New Note..."} />
            </div>
          </div>	
 }
