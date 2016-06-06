@@ -1,4 +1,5 @@
 import React from 'react'
+import { AutoSaveInput } from '../forms/auto_save_input'
 
 export class EditableContent extends React.Component {
 
@@ -24,7 +25,11 @@ export class EditableContent extends React.Component {
 
   render() {
       return this.state.editMode?
-        <div>{"Content editor placeholder"}</div>
+        <AutoSaveInput
+          contentValue={this.props.note.content}
+          doneEditing={this.toggleEditMode.bind(this)}
+          {...this.props}
+        />
       :
         this.displayContent(this.props.contentValue)   
   }

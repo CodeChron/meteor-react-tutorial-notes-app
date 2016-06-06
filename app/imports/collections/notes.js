@@ -29,7 +29,14 @@ Meteor.methods({
 			return note
   }
   ,
-
+	'note.update': (note) => {
+			note.set({
+			  updatedAt: new Date()
+			})
+			note.save()
+			return note
+  }
+  ,
 	'note.delete': (id) => Note.remove(id)
   
 

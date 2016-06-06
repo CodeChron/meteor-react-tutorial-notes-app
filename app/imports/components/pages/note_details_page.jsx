@@ -8,8 +8,7 @@ export const NoteDetailsPage = (props) => {
 
 	const
 	  pageTitle = props.subsReady? <PageTitle title={props.note.title} /> : null,
-	  noteContent = () => props.subsReady? <EditableContent contentValue={props.note.content} /> : <LoadingFeedback />
-
+	  noteContent = () => props.subsReady? <EditableContent contentValue={props.note.content}  handleUpdates={props.handleUpdateNote} field={"content"} {...props} /> : <LoadingFeedback />
 
   return <div id="app-container" className="l-app-full-height l-app-centered">
            <AppHeader middleCol={pageTitle} />
