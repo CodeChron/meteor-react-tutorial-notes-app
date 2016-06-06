@@ -22,6 +22,7 @@ export default createContainer(
 	  return {
 	  	notes,
 	  	handleCreateNote,
+	  	subsReady: sub.ready(),
       placeholder: "New Note..."
 	  }
   },
