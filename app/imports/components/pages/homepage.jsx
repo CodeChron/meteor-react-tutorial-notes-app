@@ -10,7 +10,7 @@ export const Homepage = (props) => {
 	const
 	  pageTitle = <PageTitle title={"My Notes App"} />
 	  ,
-	  displayList = () => props.subsReady? <List collection={props.notes} /> : <LoadingFeedback />
+	  displayList = () => props.subsReady? <List collection={props.notes} {...props} /> : <LoadingFeedback />
 
 
   return <div id="app-container" className="l-app-full-height l-app-centered">

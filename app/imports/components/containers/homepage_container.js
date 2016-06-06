@@ -12,7 +12,15 @@ export default createContainer(
 	    notes = sub.ready()? Note.find({}, { sort: { updatedAt: -1} }).fetch() : []
 	    ,
 		  handleCreateNote = (title) => {
-		    Meteor.call('/note/create', title, (err, result) => {
+		    Meteor.call('note.create', title, (err, result) => {
+          if (err) {
+            console.log('error: ' + err.reason)
+          }
+        })
+		  }
+		  ,
+		  handleDeleteNote = (note) => {
+		    Meteor.call('note.delete', note._id, (err, result) => {
           if (err) {
             console.log('error: ' + err.reason)
           }
@@ -22,6 +30,7 @@ export default createContainer(
 	  return {
 	  	notes,
 	  	handleCreateNote,
+	  	handleDeleteNote,
 	  	subsReady: sub.ready(),
       placeholder: "New Note..."
 	  }

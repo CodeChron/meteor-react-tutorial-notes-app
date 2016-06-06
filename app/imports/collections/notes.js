@@ -15,7 +15,7 @@ export const Note = Class.create({
 
 Meteor.methods({
 
-	'/note/create': (title) => {
+	'note.create': (title) => {
       const note = new Note()
 			note.set({
 			  title,
@@ -24,5 +24,9 @@ Meteor.methods({
 			note.save()
 			return note
   }
+  ,
+  
+	'note.delete': (id) => Note.remove(id)
+  
 
 })

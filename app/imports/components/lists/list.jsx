@@ -1,10 +1,15 @@
 import React from 'react'
+import { DeleteBtn }  from '../buttons/delete_btn'
 
 export const List = (props) => {
   
-  const list_rows = props.collection.map((row) => <li key={row._id}>{row.title}</li>)
+  const displayList = props.collection.map((item) => 
+    	<li key={item._id}>
+    	  {item.title}
+    	   <DeleteBtn handleDelete={props.handleDeleteNote} itemToDelete={item} />
+    	</li>)
 
-  return <ul>{list_rows}</ul>
+  return <ul>{displayList}</ul>
 }
 
 List.propTypes = {
