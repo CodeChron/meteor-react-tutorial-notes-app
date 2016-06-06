@@ -9,6 +9,10 @@ export const Note = Class.create({
 	collection: Notes,
 	fields: {
     title: String,
+    content: {
+      type: String,
+      default: ''
+    },
     updatedAt: Date 
   }
 })
@@ -25,7 +29,7 @@ Meteor.methods({
 			return note
   }
   ,
-  
+
 	'note.delete': (id) => Note.remove(id)
   
 
