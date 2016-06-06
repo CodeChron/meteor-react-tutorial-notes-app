@@ -32,7 +32,10 @@ export default createContainer(
 	  	handleCreateNote,
 	  	handleDeleteNote,
 	  	subsReady: sub.ready(),
-      placeholder: "New Note..."
+      placeholder: "New Note...",
+      linkItem: true,
+      linkRoute: "noteDetails",
+      deleteItem: true
 	  }
   },
   App
