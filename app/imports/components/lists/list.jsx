@@ -28,9 +28,9 @@ export const List = (props) => {
 
 List.propTypes = {
 	collection: React.PropTypes.array.isRequired,
-	linkItem: React.PropTypes.array.bool,
-	deleteItem: React.PropTypes.array.bool,
-  linkRoute: React.PropTypes.array.string
+	linkItem: React.PropTypes.bool,
+	deleteItem: React.PropTypes.bool,
+  linkRoute: React.PropTypes.string
 }
 
 List.defaultProps = {
