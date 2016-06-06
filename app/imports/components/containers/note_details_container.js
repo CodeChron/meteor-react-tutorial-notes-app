@@ -11,6 +11,7 @@ export default createContainer(
 		  noteId = FlowRouter.getParam('_id'),
 		  sub = Meteor.subscribe('note.details', noteId),
 			note = sub.ready()? Note.findOne({_id: noteId }) : {}
+		
 
 	  return {
 	  	note,

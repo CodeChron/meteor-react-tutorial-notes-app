@@ -11,6 +11,6 @@ export const AppHeader = (props) => {
 
 AppHeader.propTypes = {
   leftCol: React.PropTypes.object,
-  middleCol: React.PropTypes.object.isRequired,
+  middleCol: React.PropTypes.object,
   rightCol: React.PropTypes.object
 }

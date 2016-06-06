@@ -4,8 +4,7 @@ import { PageTitle } from '../content/page_title'
 
 export const NoteDetailsPage = (props) => {
 
-	const
-	  pageTitle = <PageTitle title={"Note Details"} />
+	const pageTitle = props.subsReady? <PageTitle title={props.note.title} /> : null
 
   return <div id="app-container" className="l-app-full-height l-app-centered">
            <AppHeader middleCol={pageTitle} />
