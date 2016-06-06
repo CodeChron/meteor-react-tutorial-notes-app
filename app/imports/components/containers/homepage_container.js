@@ -6,10 +6,11 @@ import { App } from '../app'
 export default createContainer(
 	() => {
 		
-		const 
-		  
-		  notes = Note.find({}, { sort: { updatedAt: -1}}).fetch(),
-		  
+		const
+			sub = Meteor.subscribe('notes.list')
+			,
+	    notes = sub.ready()? Note.find({}, { sort: { updatedAt: -1} }).fetch() : []
+	    ,
 		  handleCreateNote = (title) => {
 		    Meteor.call('/note/create', title, (err, result) => {
           if (err) {
