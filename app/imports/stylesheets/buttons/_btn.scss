@@ -1,0 +1,107 @@
+.btn{
+  background-color: $accent-color;
+  border:none;
+  color: $primary-text-inverted;
+  width: 100%;
+  max-width: $btn-max-width;
+  padding:.5em;
+
+  &.btn-with-icon {
+    padding-left: 1em;
+    i {float: left;}
+  }
+  &:hover {
+    background-color: darken( $accent-color, 10% );
+  }
+
+  &.btn-google {
+    background-color: $color-google;
+    &:hover {
+      background-color: darken( $color-google, 10% );
+    }
+  }
+  &.btn-facebook {
+    background-color: $color-facebook;
+    &:hover {
+      background-color: darken( $color-facebook, 10% );
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: $color-gray-6;
+  &:hover {
+    background-color: darken($color-gray-6, 20%);
+  }
+}
+
+.btn-small {
+  font-size: $btn-small;
+
+  .material-icons {
+  font-size: $btn-small;
+  }
+}
+.btn-x-small {
+  font-size: $btn-x-small;
+}
+
+.icon-btn{
+  background-color: transparent;
+  border:none;
+
+  .material-icons {
+    font-size: $btn-dflt-size;
+  }
+
+  margin:0;
+  padding: 0;
+  text-align: center;
+
+  &:focus {
+   outline: 0;
+  }
+}
+
+.text-btn{
+  background-color: transparent;
+  border:none;
+  color: $color-gray-5;
+  font-size: $btn-dflt-size;
+  margin:0;
+  text-align: center;
+
+  &:focus {
+   outline: 0;
+  }
+
+  &.btn-small {
+    font-size: $btn-small;
+
+    .material-icons {
+    font-size: $btn-small;
+    }
+  }
+  &.btn-x-small {
+    font-size: $btn-x-small;
+  }
+}
+
+.circle-btn {
+  border:none;
+  width: $btn-dflt-size + .5em;
+  height:  $btn-dflt-size + .5em;
+  margin:0;
+  padding: 0;
+  padding-top:10%;
+  border-radius:50%;
+  text-align: center;
+
+  .material-icons {
+    font-size: $btn-dflt-size;
+  }
+
+  &:focus {
+   outline: 0;
+  }
+}

@@ -1,0 +1,46 @@
+// --------------------------------
+// COLORS - GLOBAL
+// --------------------------------
+body {
+  background-color: $color-gray-8;
+  color: $base-font-color;
+}
+
+.app-container {
+  background-color: $base-bg-color;
+}
+
+
+// --------------------------------
+// BUTTONS, ICONS
+// --------------------------------
+.icon-btn, .circle-btn {
+  color: $icon-color;
+
+  &:hover {
+    color: darken($icon-color, 20%);
+  }
+}
+
+.circle-btn {
+  background-color: transparent;
+
+ &:hover {
+   background-color: $primary-color;
+  }
+}
+
+// --------------------------------
+// APP HEADER
+// --------------------------------
+.app-header {
+  .icon-btn, .circle-btn {
+    color: $primary-color-light;
+
+    &:hover {
+      color: $primary-text-inverted;
+    }
+
+  }
+}
+
