@@ -3,8 +3,6 @@ import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
 import { ContentBlock } from '../content/content_block'
 import { ClickToEdit } from '../forms/click_to_edit'
-import { EditablePageTitle } from '../content/editable_page_title'
-import { EditableContent } from '../content/editable_content'
 import { LoadingFeedback } from '../utility/loading_feedback'
 import { IconBtn } from '../buttons/icon_btn'
 
