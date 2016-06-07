@@ -19,7 +19,6 @@ export const NoteDetailsPage = (props) => {
 	      contentValue={contentValue}
 	      handleUpdates={props.handleUpdateNote}
 	      multiline={multiline}
-	      allowEmpty={allowEmpty}
 	      {...props}
 	    />
 
