@@ -1,7 +1,7 @@
 import React from 'react'
 import { AutoSaveInput } from './auto_save_input'
 
-export class ClickToEditContainer extends React.Component {
+export class ClickToEdit extends React.Component {
 
   constructor(props){
     super(props)
@@ -23,11 +23,11 @@ export class ClickToEditContainer extends React.Component {
   }
 }
 
-ClickToEditContainer.propTypes = { 
+ClickToEdit.propTypes = { 
   clickableComponent: React.PropTypes.object.isRequired,
   editMode: React.PropTypes.bool
 }
 
-ClickToEditContainer.defaultProps = {
+ClickToEdit.defaultProps = {
   editMode: false
 }

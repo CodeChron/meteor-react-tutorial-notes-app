@@ -2,12 +2,11 @@ import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
 import { ContentBlock } from '../content/content_block'
-import { ClickToEditContainer } from '../forms/click_to_edit_container'
+import { ClickToEdit } from '../forms/click_to_edit'
 import { EditablePageTitle } from '../content/editable_page_title'
 import { EditableContent } from '../content/editable_content'
 import { LoadingFeedback } from '../utility/loading_feedback'
 import { IconBtn } from '../buttons/icon_btn'
-
 
 export const NoteDetailsPage = (props) => {
 
@@ -16,7 +15,7 @@ export const NoteDetailsPage = (props) => {
     ,
     backBtn = <IconBtn icon="arrow_back" handleClick={handleBackBtnClick} />
     ,
-	  displayEditableComponent = (clickableComponent, contentValue, field, multiline) => <ClickToEditContainer
+	  displayEditableComponent = (clickableComponent, contentValue, field, multiline) => <ClickToEdit
 	      clickableComponent={clickableComponent}
 	      field={field}
 	      contentValue={contentValue}
