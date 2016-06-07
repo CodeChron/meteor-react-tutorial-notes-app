@@ -12,8 +12,7 @@ export const Homepage = (props) => {
 	  ,
 	  displayList = () => props.subsReady? <List collection={props.notes} {...props} /> : <LoadingFeedback />
 
-
-  return <div id="app-container" className="l-app-full-height l-app-centered">
+  return <div id="app-container">
            <AppHeader middleCol={pageTitle} />
            <div id="main-content">
              <SingleFieldSubmit

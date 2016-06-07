@@ -1,0 +1,21 @@
+// _________________________________
+//
+// FLEX ROW with options for vertical/horizontal centering 
+// _________________________________
+
+.l-flex-row {
+	display: flex;
+  flex-flow: row nowrap;
+
+  &.horizontally-centered {
+  	align-items:center;
+  }
+  &.vertically-centered {
+  	justify-content: center;
+  }
+  &.main-content {
+  	 flex: 1;
+  }
+}
+
+
