@@ -14,13 +14,14 @@ export class EditableContent extends React.Component {
     this.setState({ editMode: !this.state.editMode })
   }
 
-  displayContent(contentValue){
+  displayContent(contentValue, isMultiLine){
+
     const
       noContentMsg = "Empty note.",
-      isEmpty = contentValue === "",
-      displayedContent = isEmpty? noContentMsg : contentValue
+      isEmpty = contentValue === ""
 
-    return <span className="clickable" onClick={this.toggleEditMode.bind(this)}>{displayedContent}</span>
+    return isEmpty? noContentMsg : contentValue
+
   }
 
   render() {
@@ -31,15 +32,17 @@ export class EditableContent extends React.Component {
           {...this.props}
         />
       :
-        this.displayContent(this.props.contentValue)   
+        <span className="clickable" onClick={this.toggleEditMode.bind(this)}>{this.displayContent(this.props.contentValue, this.props.multiLine)}</span> 
   }
 }
 
 EditableContent.propTypes = { 
   contentValue: React.PropTypes.string.isRequired,
-  editMode: React.PropTypes.bool
+  editMode: React.PropTypes.bool,
+  multiLine: React.PropTypes.bool
 }
 
 EditableContent.defaultProps = {
+  multiLine: false,
   editMode: false
 }

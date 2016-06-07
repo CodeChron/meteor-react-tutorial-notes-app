@@ -22,5 +22,9 @@ export const NoteDetailsPage = (props) => {
            <div id="main-content">
            {noteContent()}
            </div>
-         </div>	
+         </div>
 }
+
+// use lodash to check if any subscription returns true - turn into a util
+// <EditableContent contentValue={props.note.content} contentBlock={object} multiline={true - set to false by default} handleUpdates={props.handleUpdateNote} field={"title"} {...props} />
+// Create a multi line text block that can be passed in to contentBlock, eg PageTitle, or ContentBlock - which is just content enclosed by divs for now. Will need to pass in the content as a separate prop? Even though it already is included with the contentBlock?
