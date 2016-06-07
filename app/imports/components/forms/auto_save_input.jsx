@@ -30,23 +30,38 @@ export class AutoSaveInput extends React.Component {
   }
 
   handleOnBlur() {
-    this.props.doneEditing()
+    this.props.doneEditing? this.props.doneEditing() : null
+  }
+
+  displayEditor(multiLineEditor){
+    return multiLineEditor?
+      <form>
+          <div>
+            <textarea
+              placeholder={this.props.placeholder}
+              value={this.state.contentValue}
+              onChange={this.handleOnChange.bind(this)}
+              autoFocus={"true"}
+              onBlur={this.handleOnBlur.bind(this)}
+            />
+          </div>
+          <button>Done</button>
+        </form>
+    :
+      <form>
+        <input
+          type="text"
+          placeholder={this.props.placeholder}
+          value={this.state.contentValue}
+          onChange={this.handleOnChange.bind(this)}
+          autoFocus={"true"}
+          onBlur={this.handleOnBlur.bind(this)}
+        />
+      </form>
   }
 
   render() {
-    return  <form>
-              <div className="form-group">
-                <textarea
-                  className="form-control"
-                  placeholder={this.props.placeholder}
-                  value={this.state.contentValue}
-                  onChange={this.handleOnChange.bind(this)}
-                  autoFocus={"true"}
-                  onBlur={this.handleOnBlur.bind(this)}
-                />
-              </div>
-              <button className="btn btn-default">Done</button>
-            </form>
+    return  this.displayEditor(this.props.multiline)
   }
 }
 
@@ -54,10 +69,12 @@ AutoSaveInput.propTypes = {
   handleUpdates: React.PropTypes.func.isRequired,
   field: React.PropTypes.string.isRequired,
   contentValue: React.PropTypes.string,
-  placeholder: React.PropTypes.string
+  placeholder: React.PropTypes.string,
+  multiline: React.PropTypes.bool
 }
 
 AutoSaveInput.defaultProps = {
   contentValue:  ""  ,
-  placeholder: "Write something..."
+  placeholder: "Write something...",
+  multiline: false
 }
