@@ -1,0 +1,23 @@
+.text-btn{
+  background-color: transparent;
+  border:none;
+  color: $color-gray-5;
+  font-size: $btn-dflt-size;
+  margin:0;
+  text-align: center;
+
+  &:focus {
+   outline: 0;
+  }
+
+  &.btn-small {
+    font-size: $btn-small;
+
+    .material-icons {
+    font-size: $btn-small;
+    }
+  }
+  &.btn-x-small {
+    font-size: $btn-x-small;
+  }
+}

@@ -1,19 +1,19 @@
 // VARIABLES, MIXINS, and HELPERS
 // Variables and functions we might use across multiple stylesheets
 // __________________________________________________________________
-@import "variables";
+@import "core/variables";
 
 
 // NORMALIZE/RESET
 // "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
 // __________________________________________________________________
-@import "normalize";
+@import "core/normalize";
 
 
 //BASE
 //Styles applied directly to HTML selectors
 // __________________________________________________________________
-@import "base";
+@import "core/base";
 
 
 //LAYOUT
@@ -25,16 +25,26 @@
 //COMPONENTS 
 //This combines 'modules' and 'state' in SMACCS. We organize it this way so our stylesheets can be aligned with our React components
 // __________________________________________________________________
-// Nothing added here yet
+@import "components/buttons/btn";
+@import "components/buttons/icon_btn";
+@import "components/buttons/text_btn";
+@import "components/buttons/circle_btn";
+@import "components/forms/single_field_submit";
+@import "components/lists/list";
+
+//@import "components/menus/options_menu";
 
 
 //THEME 
 //Define color, typography, etc. 
 // __________________________________________________________________
-// Nothing added here yet
+@import "theme/text";
+@import "theme/colors";
+
 
 
 //VENDOR 
 // 3rd party styling 
 // __________________________________________________________________
-@import "loader";
+@import "vendor/loader";
+//@import "vendor/s-alert";

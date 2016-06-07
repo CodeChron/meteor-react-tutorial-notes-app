@@ -1,0 +1,16 @@
+.icon-btn{
+  background-color: transparent;
+  border:none;
+
+  .material-icons {
+    font-size: $btn-dflt-size;
+  }
+
+  margin:0;
+  padding: 0;
+  text-align: center;
+
+  &:focus {
+   outline: 0;
+  }
+}
