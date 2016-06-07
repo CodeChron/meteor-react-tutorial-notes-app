@@ -18,7 +18,8 @@ export const NoteDetailsPage = (props) => {
 	      field={field}
 	      contentValue={contentValue}
 	      handleUpdates={props.handleUpdateNote}
-	      multiline={true}
+	      multiline={multiline}
+	      allowEmpty={allowEmpty}
 	      {...props}
 	    />
 
@@ -29,7 +30,7 @@ export const NoteDetailsPage = (props) => {
 	    noteContentComponent = <ContentBlock contentValue={props.note.content} emptyMsg={"Empty Note"} />
 
 	  return <div id="app-container" className="l-app-full-height l-app-centered">
-           <AppHeader leftCol={backBtn} middleCol={displayEditableComponent(noteTitleComponent, props.note.content, "title", false)} />
+           <AppHeader leftCol={backBtn} middleCol={displayEditableComponent(noteTitleComponent, props.note.title, "title", false)} />
            <div id="main-content">
            {displayEditableComponent(noteContentComponent, props.note.content, "content", true)}
            </div>

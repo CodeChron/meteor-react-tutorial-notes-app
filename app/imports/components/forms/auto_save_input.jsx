@@ -25,6 +25,7 @@ export class AutoSaveInput extends React.Component {
 
   handleOnChange(e) {
     const updatedValue = e.target.value
+
     this.setState({contentValue: updatedValue})
     this.handleUpdates(updatedValue)
   }
