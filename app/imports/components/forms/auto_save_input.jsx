@@ -44,10 +44,12 @@ export class AutoSaveInput extends React.Component {
               onChange={this.handleOnChange.bind(this)}
               autoFocus={"true"}
               onBlur={this.handleOnBlur.bind(this)}
-              className="l-flex-main-content"
+              className="l-flex-main-content invisible-textarea"
             />
-           <div>
-             <button className="text-btn">Done</button>
+           <div className="l-flex-row l-flex-centered l-flex-vertical-middle">
+             <div className="l-flex-main-content l-centered">
+               <button className="text-btn btn-main">Done</button>
+             </div>
            </div>
         </form>
     :

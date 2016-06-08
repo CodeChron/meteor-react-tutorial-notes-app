@@ -1,13 +1,23 @@
-// .btn{
-//   width: 100%;
-//   max-width: $btn-max-width;
-//   padding:.5em;
+.text-btn{
+  font-size: $btn-dflt-size;
+}
 
-//   &.btn-with-icon {
-//     padding-left: 1em;
-//     i {float: left;}
-//   }
-// }
+.icon-btn{
+  background-color: transparent;
+  border:none;
+
+  .material-icons {
+    font-size: $btn-dflt-size;
+  }
+
+  margin:0;
+  padding: 0;
+  text-align: center;
+
+  &:focus {
+   outline: 0;
+  }
+}
 
 .btn-small {
   font-size: $btn-small;
@@ -22,4 +32,9 @@
   .material-icons {
     font-size: $btn-small;
   }
+}
+
+.btn-main {
+  width: 100%;
+  max-width: $btn-main-max-width;
 }

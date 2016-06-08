@@ -1,4 +1,100 @@
 
+// .content-editor {
+
+//   form {
+//     margin:0;
+//     padding:0;
+
+//     textarea {
+//       margin:0;
+//       padding:0;
+//       outline: none;
+//       resize: none;
+//       border:none;
+//     }
+//     .form-controls {
+//       border-top: 1px solid $color-gray-7;
+//     }
+//   }
+// }
+
+// form.content-editor {
+
+//   margin:0;
+//   padding:0;
+
+//   textarea {
+//     font-size: $base-font-size;
+//     margin:0;
+//     padding-top:$main-content-editing-padding-top;
+//     padding-left: $app-left-right-padding;
+//     padding-right: $app-left-right-padding;
+//     padding-bottom: 0;
+//     outline: none;
+//     resize: none;
+//     border:none;
+//   }
+//   .form-controls {
+//     border-top: 1px solid $color-gray-7;
+//     padding-top: $form-controls-padding;
+//     // margin: 0  $app-left-right-padding;
+//   }
+
+// }
+
+
+
+// --------------------------------
+// MAIN CONTENT
+// --------------------------------
+
+// .main-content {
+//   flex: 1;
+//   padding: 0 $app-left-right-padding 0 $app-left-right-padding;
+//   margin: $app-header-height 0 0 0;
+//   height:100%; 
+//   display: flex;
+//   flex-direction: column;
+//   min-width: $app-min-width;
+// }
+
+// .main-content-editing {
+//   flex: 1;
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+
+//     textarea {
+//       margin:0;
+//       padding:0;
+//       padding-top: $form-controls-padding;
+//       outline: none;
+//       resize: none;
+//       border:none;
+//     }
+//     .form-controls {
+//       border-top: 1px solid $color-gray-7;
+//       padding-top: $form-controls-padding;
+//     }
+// }
+
+  // &.l-flex-centered {
+  //    justify-content: center;
+  // }  
+
+  // &.l-flex-vertical-middle {
+  //   align-items:center;
+  // }  
+
+  // .l-flex-main-content {
+  //    flex: 1;
+  // }
+
+  // .l-flex-icon-column {
+  //    width: $l-flex-icon-column-width;
+  // }
+
 // //three column centered horizontal flex layout with the center block filling remaining space
 // .flex-row-centered {
 //   display: flex;
@@ -66,4 +162,37 @@
 // 	  padding-right: .75em;
 //   }
 // }
+
+  // background-color: transparent;
+  // border:none;
+  // color: $color-gray-5;
+ 
+  // margin:0;
+  // text-align: center;
+
+  // &:focus {
+  //  outline: 0;
+  // }
+
+  // &.btn-small {
+  //   font-size: $btn-small;
+
+  //   .material-icons {
+  //   font-size: $btn-small;
+  //   }
+  // }
+  // &.btn-x-small {
+  //   font-size: $btn-x-small;
+  // }
+  // .btn{
+//   width: 100%;
+//   max-width: $btn-max-width;
+//   padding:.5em;
+
+//   &.btn-with-icon {
+//     padding-left: 1em;
+//     i {float: left;}
+//   }
+// }
+
 
