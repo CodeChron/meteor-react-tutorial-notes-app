@@ -8,6 +8,7 @@ $l-flex-icon-column-width: 2em;
 
 // App Container
 $app-container-max-width: 40em;
+$app-container-min-width: 15em;
 $app-container-left-right-padding: 2em;
 
 //App Header
@@ -70,28 +71,31 @@ $color-gray-2:#424242;
 $color-gray-1:#212121; //darkest
 
 
+$divider-line: 1px solid $color-gray-7;
+
 // __________________________________
 //
 // **** TEXT ****
 //
 $base-font: "proxima-nova", 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
-$brand-font: "jubilat", 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+
 $base-font-size: 1.2em;
-$small-text: $base-font-size * .65;
+
 $heading-1: 1.25em;
+$icon-color:$secondary-text-color;
+$icon-color-inverted:$color-gray-10;
+
+$base-bg-color: $color-gray-9;
+$base-font-color: $color-gray-1;
+$app-container-bg-color: #FFFFFF;
+
 // $heading-2: 1.5em;
 // $heading-3: 1.17em;
 // $heading-4: 1.12em;
 // $heading-5: .83em;
 // $heading-6: .75em;
+// $brand-font: "jubilat", 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+// $small-text: $base-font-size * .65;
 
-$icon-color:$secondary-text-color;
-$icon-color-inverted:$color-gray-10;
-
-
-
-$base-bg-color: $color-gray-9;
-$base-font-color: $color-gray-1;
-$app-container-bg-color: #FFFFFF;
 
 

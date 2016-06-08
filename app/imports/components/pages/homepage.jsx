@@ -1,7 +1,6 @@
 import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
-import { SingleFieldSubmit } from '../forms/single_field_submit'
 import { List } from '../lists/list'
 import { LoadingFeedback } from '../utility/loading_feedback'
 
@@ -10,18 +9,30 @@ export const Homepage = (props) => {
 	const
 	  pageTitle = <PageTitle title={"My Notes App"} />
 	  ,
-	  displayList = () => props.subsReady? <List collection={props.notes} {...props} /> : <LoadingFeedback />
+	  displayList = () => props.subsReady? 
+      <List
+        collection={props.notes}
+        placeholder={"New Note..."}
+        handleSubmit={props.handleCreateNote}
+        {...props}
+      />
+      : 
+      <LoadingFeedback />
 
   return <div id="app-container">
            <AppHeader middleCol={pageTitle} />
            <div id="main-content">
-             <SingleFieldSubmit
-               handleSubmit={props.handleCreateNote}
-               placeholder={"New Note..."}
-             />
-            <div className="l-top-padding">{displayList()}</div>
+
+           {displayList(props)}
            </div>
          </div>	
 }
 
+
+            // <div className="l-bottom-spacing">
+            //  <SingleFieldSubmit
+            //    handleSubmit={props.handleCreateNote}
+            //    placeholder={"New Note..."}
+            //  />
+            // </div>
 

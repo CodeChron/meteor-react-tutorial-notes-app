@@ -35,7 +35,8 @@ export default createContainer(
       placeholder: "New Note...",
       linkItem: true,
       linkRoute: "noteDetails",
-      deleteItem: true
+      deleteItem: true,
+      addItem: true
 	  }
   },
   App
