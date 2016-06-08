@@ -13,8 +13,12 @@ body {
   height: 100vh; //set the app container to fill the viewport height
   max-width: $app-container-max-width; 
   margin: 0 auto; //center the app in larger viewports
+  @include flex-column;
 }
+
 #main-content {
+	flex: 1;
+	@include flex-column;
 	padding-left: $main-content-left-right-padding;
 	padding-right: $main-content-left-right-padding;
 }

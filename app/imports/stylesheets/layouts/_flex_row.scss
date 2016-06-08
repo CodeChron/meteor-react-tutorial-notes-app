@@ -3,7 +3,6 @@
 // FLEX ROW with options for vertical/horizontal centering 
 // _________________________________
 
-//HELPERS
 @mixin flex-row {
   display: flex;
   flex-flow: row nowrap;

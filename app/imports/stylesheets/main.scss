@@ -4,7 +4,7 @@
 @import "core/variables";
 
 
-// NORMALIZE/RESET
+// NORMALIZE
 // "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
 // __________________________________________________________________
 @import "core/normalize";
@@ -17,10 +17,10 @@
 
 
 //LAYOUTS
-//Define one or more page layouts
 // __________________________________________________________________
-@import "layouts/full_height";
 @import "layouts/flex_row";
+@import "layouts/flex_column";
+@import "layouts/full_height";
 
 
 //COMPONENTS 

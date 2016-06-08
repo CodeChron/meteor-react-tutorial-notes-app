@@ -31,22 +31,24 @@ export class AutoSaveInput extends React.Component {
   }
 
   handleOnBlur() {
-    this.props.doneEditing? this.props.doneEditing() : null
+    return
+    // this.props.doneEditing? this.props.doneEditing() : null
   }
 
   displayEditor(multiLineEditor){
     return multiLineEditor?
-      <form>
-          <div>
+      <form className="l-flex-main-content l-flex-column">
             <textarea
               placeholder={this.props.placeholder}
               value={this.state.contentValue}
               onChange={this.handleOnChange.bind(this)}
               autoFocus={"true"}
               onBlur={this.handleOnBlur.bind(this)}
+              className="l-flex-main-content"
             />
-          </div>
-          <button>Done</button>
+           <div>
+             <button>Done</button>
+           </div>
         </form>
     :
       <form>
