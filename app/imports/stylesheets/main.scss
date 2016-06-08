@@ -21,6 +21,7 @@
 // __________________________________________________________________
 @import "layouts/flex_layouts";
 @import "layouts/full_height";
+@import "layouts/app_header";
 
 
 //COMPONENTS 
@@ -36,9 +37,9 @@
 
 
 //THEME 
-//Define color, typography, etc. 
+//Define color, typography 
 // __________________________________________________________________
-// @import "theme/text";
+@import "theme/text";
 // @import "theme/colors";
 
 
