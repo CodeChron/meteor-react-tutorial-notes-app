@@ -28,11 +28,3 @@ export const Homepage = (props) => {
          </div>	
 }
 
-
-            // <div className="l-bottom-spacing">
-            //  <SingleFieldSubmit
-            //    handleSubmit={props.handleCreateNote}
-            //    placeholder={"New Note..."}
-            //  />
-            // </div>
-
