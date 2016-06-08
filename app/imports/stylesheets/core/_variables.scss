@@ -2,29 +2,29 @@
 //
 // **** LAYOUT ****
 //
+
+//Flex Row
+$l-flex-icon-column-width: 2em;
+
 // App Container
 $app-container-max-width: 50em;
 $app-container-left-right-padding: 2em;
 
 //App Header
 $app-header-height: 4em;
-// $app-header-left-right-padding: $app-container-left-right-padding - 1em;
-
-//Flex Row
-$l-flex-icon-column-width: 2em;
+$app-header-left-right-padding: $app-container-left-right-padding - .5em;
 
 //Forms
 //TODO: is this needed?
-$form-controls-padding: 1em;
+// $form-controls-padding: 1em;
 
 //Main Content
 $main-content-left-right-padding: $app-container-left-right-padding;
 // $main-content-editing-padding-top: $app-header-height + $form-controls-padding;
 
-
 // Responsive break-points 
-$tablet-break-point: 43.750em;
-$app-height-tablet-up: 90vh;
+// $tablet-break-point: 43.750em;
+// $app-height-tablet-up: 90vh;
 
 
 // __________________________________
@@ -85,11 +85,11 @@ $brand-font: "jubilat", 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 
 $base-font-size: 1.2em;
 $small-text: $base-font-size * .65;
 $heading-1: 1em;
-$heading-2: 1.5em;
-$heading-3: 1.17em;
-$heading-4: 1.12em;
-$heading-5: .83em;
-$heading-6: .75em;
+// $heading-2: 1.5em;
+// $heading-3: 1.17em;
+// $heading-4: 1.12em;
+// $heading-5: .83em;
+// $heading-6: .75em;
 
 
 // __________________________________
