@@ -4,7 +4,7 @@
 
 	  & > li {
 
-	    @include flex-row-centered;
+	    @include flex-row;
 
 	    padding-top:   $list-item-padding;
 	    padding-bottom: $list-item-padding;
@@ -12,15 +12,10 @@
 	  &:first-child {
       padding-top:0;
     }
-    
+
 	  &:last-child {
       border-bottom: none;
       padding-bottom:0;
     }
-	  // .list-item-main-content {
-	  //   flex: 1;  
-	  // }
-	  // .list-item-secondary-content {
-	  // }
 	}
 }

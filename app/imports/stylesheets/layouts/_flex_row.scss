@@ -4,10 +4,9 @@
 // _________________________________
 
 //HELPERS
-@mixin flex-row-centered {
+@mixin flex-row {
   display: flex;
   flex-flow: row nowrap;
- 
  
   &.l-flex-centered {
   	 justify-content: center;
@@ -26,8 +25,8 @@
   }
 }
 
-.l-flex-row-centered {
-	@include flex-row-centered;
+.l-flex-row {
+	@include flex-row;
 }
 
 
