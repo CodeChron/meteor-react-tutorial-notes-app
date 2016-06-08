@@ -13,9 +13,7 @@ export const DeleteBtn = (props) => {
   }
 
   return <IconBtn handleClick={()=> handleDelete(props.itemToDelete)}
-            title={props.title}
-            alt={props.title}
-            icon={props.icon}
+            {...props}
           />
 }
 

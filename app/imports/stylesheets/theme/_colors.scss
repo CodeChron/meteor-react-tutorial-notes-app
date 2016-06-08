@@ -40,6 +40,38 @@ body {
 // --------------------------------
 // BUTTONS, ICONS
 // --------------------------------
+
+.btn{
+  background-color: $accent-color;
+  border:none;
+  color: $primary-text-inverted;
+
+  &:hover {
+    background-color: darken( $accent-color, 10% );
+  }
+
+  &.btn-google {
+    background-color: $color-google;
+    &:hover {
+      background-color: darken( $color-google, 10% );
+    }
+  }
+  &.btn-facebook {
+    background-color: $color-facebook;
+    &:hover {
+      background-color: darken( $color-facebook, 10% );
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: $color-gray-6;
+  &:hover {
+    background-color: darken($color-gray-6, 20%);
+  }
+}
+
+
 .icon-btn, .circle-btn {
   color: $icon-color;
 

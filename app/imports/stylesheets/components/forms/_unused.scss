@@ -40,3 +40,56 @@
 //   }
 
 // }
+
+
+
+// --------------------------------
+// MAIN CONTENT
+// --------------------------------
+
+// .main-content {
+//   flex: 1;
+//   padding: 0 $app-left-right-padding 0 $app-left-right-padding;
+//   margin: $app-header-height 0 0 0;
+//   height:100%; 
+//   display: flex;
+//   flex-direction: column;
+//   min-width: $app-min-width;
+// }
+
+// .main-content-editing {
+//   flex: 1;
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+
+//     textarea {
+//       margin:0;
+//       padding:0;
+//       padding-top: $form-controls-padding;
+//       outline: none;
+//       resize: none;
+//       border:none;
+//     }
+//     .form-controls {
+//       border-top: 1px solid $color-gray-7;
+//       padding-top: $form-controls-padding;
+//     }
+// }
+
+  // &.l-flex-centered {
+  //    justify-content: center;
+  // }  
+
+  // &.l-flex-vertical-middle {
+  //   align-items:center;
+  // }  
+
+  // .l-flex-main-content {
+  //    flex: 1;
+  // }
+
+  // .l-flex-icon-column {
+  //    width: $l-flex-icon-column-width;
+  // }

@@ -1,3 +1,22 @@
+.l-flex-main-content {
+  flex: 1;
+}
+
+// _________________________________
+//
+// FLEX COLUMN 
+// _________________________________
+
+@mixin flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.l-flex-column {
+  @include flex-column;
+}
+
+
 // _________________________________
 //
 // FLEX ROW with options for vertical/horizontal centering 
@@ -14,10 +33,6 @@
   &.l-flex-vertical-middle {
   	align-items:center;
   }  
-
-  .l-flex-main-content {
-  	 flex: 1;
-  }
 
   .l-flex-icon-column {
   	 width: $l-flex-icon-column-width;

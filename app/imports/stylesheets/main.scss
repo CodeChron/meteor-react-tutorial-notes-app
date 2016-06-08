@@ -18,16 +18,15 @@
 
 //LAYOUTS
 // __________________________________________________________________
-@import "layouts/flex_row";
-@import "layouts/flex_column";
+@import "layouts/flex_layouts";
 @import "layouts/full_height";
 
 
 //COMPONENTS 
-//This combines 'modules' and 'state' in SMACCS. We organize it this way so our stylesheets can be aligned with our React components
+//This combines 'modules' and 'state' in SMACCS.
 // __________________________________________________________________
-// @import "components/buttons/btn";
-// @import "components/buttons/icon_btn";
+@import "components/buttons/btn";
+@import "components/buttons/icon_btn";
 // @import "components/buttons/text_btn";
 // @import "components/buttons/circle_btn";
 @import "components/forms/single_field_submit";
