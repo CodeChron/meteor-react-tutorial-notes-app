@@ -14,10 +14,6 @@ $app-container-left-right-padding: 2em;
 $app-header-height: 4em;
 $app-header-left-right-padding: $app-container-left-right-padding - .5em;
 
-//Forms
-//TODO: is this needed?
-// $form-controls-padding: 1em;
-
 //Main Content
 $main-content-left-right-padding: $app-container-left-right-padding;
 // $main-content-editing-padding-top: $app-header-height + $form-controls-padding;
@@ -58,14 +54,6 @@ $primary-text-color:   #212121;
 $secondary-text-color: #727272;
 $divider-color:        #B6B6B6;
 
-// $primary-color-dark:   #689F38;
-// $primary-color:        #8BC34A;
-// $primary-color-light:  #DCEDC8;
-// $accent-color:         #4CAF50;
-// $primary-text-color:   #212121;
-// $primary-text-inverted: #FFFFFF;
-// $secondary-text-color: #727272;
-// $divider-color:        #B6B6B6;
 $base-bg-color:        #FFFFFF;
 $link-color:          $primary-color;
 
@@ -81,9 +69,6 @@ $color-gray-3:#616161;
 $color-gray-2:#424242;
 $color-gray-1:#212121; //darkest
 
-//Social
-// $color-google: #d74838;
-// $color-facebook: #3b5998;
 
 // __________________________________
 //
@@ -109,15 +94,4 @@ $base-bg-color: $color-gray-8;
 $base-font-color: $color-gray-1;
 $app-container-bg-color: #FFFFFF;
 
-// __________________________________
-//
-// **** Z-INDEXES ****
-//
-
-// $z-index-dropdown: 20;
-// $z-index-mask: 10;
-// $z-index-appheader: 5;
-
-// $app-container-min-width: ($app-container-width/2) + ($app-container-left-right-padding * 2);
-// $centered-block-max-width: $app-container-max-width / 2;
 
