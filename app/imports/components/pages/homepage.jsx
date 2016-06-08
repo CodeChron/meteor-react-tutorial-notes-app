@@ -19,7 +19,7 @@ export const Homepage = (props) => {
                handleSubmit={props.handleCreateNote}
                placeholder={"New Note..."}
              />
-            {displayList()}
+            <div className="l-top-padding">{displayList()}</div>
            </div>
          </div>	
 }

@@ -10,7 +10,7 @@ body {
   min-height: 100%; // min-height is needed for pages that might scroll, ie they may contain _more_ than 100% of viewport height
 }
 #app-container {
-  height: 100vh; //set the app container to fill the viewport height
+  min-height: 100vh; //set the app container to fill the viewport height and exceed it if the content requires it
   max-width: $app-container-max-width; 
   margin: 0 auto; //center the app in larger viewports
   @include flex-column;
