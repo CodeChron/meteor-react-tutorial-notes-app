@@ -27,3 +27,31 @@ a {
     text-decoration: underline;
   }
 }
+
+// --------------------------------
+// BUTTONS
+// --------------------------------
+// a {
+//   text-decoration: none;
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+
+.material-icons {
+  font-size: $btn-dflt-size;
+}
+
+.text-btn{
+  font-size: $btn-dflt-size;
+}
+
+.icon-btn{
+
+  &.btn-small {
+    .material-icons {
+      font-size: $btn-small;
+    }
+  }
+}

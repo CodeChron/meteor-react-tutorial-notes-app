@@ -17,3 +17,12 @@ textarea.invisible-textarea {
   resize: none;
   border:none;
 }
+
+form.l-content-editor {
+	padding:0;
+	
+	textarea {
+    padding:0;
+	}
+}
+

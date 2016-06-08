@@ -15,17 +15,11 @@
    outline: 0;
   }
 
-  .material-icons {
-    font-size: $btn-dflt-size;
-  }
+
 
   &.btn-small {
     .material-icons {
       font-size: $btn-small;
     }
   }
-}
-
-.text-btn{
-  font-size: $btn-dflt-size;
 }
