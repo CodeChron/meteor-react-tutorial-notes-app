@@ -31,8 +31,7 @@ export class AutoSaveInput extends React.Component {
   }
 
   handleOnBlur() {
-    return
-    // this.props.doneEditing? this.props.doneEditing() : null
+    this.props.doneEditing? this.props.doneEditing() : null
   }
 
   displayEditor(multiLineEditor){

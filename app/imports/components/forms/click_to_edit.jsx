@@ -29,5 +29,5 @@ ClickToEdit.propTypes = {
 }
 
 ClickToEdit.defaultProps = {
-  editMode: true
+  editMode: false
 }
