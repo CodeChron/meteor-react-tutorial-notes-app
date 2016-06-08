@@ -43,4 +43,27 @@
 //   align-items:center;
 //   justify-content: center;
 // }
+// .list {
+// 	li {
+// 		margin-bottom:$li-margin-bottom;
+// 	}
+// }
+
+// //HELPERS
+// @mixin list-unstyled {
+//   padding-left: 0;
+//   list-style: none;
+// }
+
+
+
+// .list-inline {
+//   padding: 0;
+//   margin: 0;
+//   & > li {
+// 	  display: inline;
+// 	  list-style-type: none;
+// 	  padding-right: .75em;
+//   }
+// }
 

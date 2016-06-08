@@ -5,16 +5,17 @@ import { DeleteBtn }  from '../buttons/delete_btn'
 export const List = (props) => {
 
 	 const listFeatures = {
-  	linkItem: (item) => <a href={FlowRouter.path(props.linkRoute , {_id: item._id})}>{item.title}</a>,
-  	deleteItem: (item) => <DeleteBtn handleDelete={props.handleDeleteNote} itemToDelete={item} />	
+  	itemTitle: (item) => <span className="l-flex-main-content">{item.title}</span>,
+  	linkItem: (item) => <a href={FlowRouter.path(props.linkRoute , {_id: item._id})} className="l-flex-main-content">{item.title}</a>,
+  	deleteItem: (item) => <span className="l-flex-icon-column"><DeleteBtn handleDelete={props.handleDeleteNote} itemToDelete={item} /></span>
 	}
   
   const displayList = props.collection.map((item) => 
-    	<li key={item._id}>
+    	<li key={item._id} className="l-flex-vertical-middle">
     	  {props.linkItem? 
 	 	      listFeatures.linkItem(item)
 	 	      :
-	 	       item.title
+	 	       listFeatures.itemTitle(item)
 	 	    }
 	 	    {props.deleteItem? 
 	 	      listFeatures.deleteItem(item)
@@ -23,7 +24,7 @@ export const List = (props) => {
 	 	    }
     	</li>)
 
-  return <ul>{displayList}</ul>
+  return <ul className="l-list">{displayList}</ul>
 }
 
 List.propTypes = {

@@ -3,19 +3,31 @@
 // FLEX ROW with options for vertical/horizontal centering 
 // _________________________________
 
-.l-flex-row-centered {
-	display: flex;
+//HELPERS
+@mixin flex-row-centered {
+  display: flex;
   flex-flow: row nowrap;
-  align-items:center;
-  justify-content: center;
+ 
+ 
+  &.l-flex-centered {
+  	 justify-content: center;
+  }  
+
+  &.l-flex-vertical-middle {
+  	align-items:center;
+  }  
 
   .l-flex-main-content {
   	 flex: 1;
   }
 
   .l-flex-icon-column {
-  	 width: $app-header-icon-column;
+  	 width: $l-flex-icon-column-width;
   }
+}
+
+.l-flex-row-centered {
+	@include flex-row-centered;
 }
 
 

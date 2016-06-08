@@ -1,13 +1,39 @@
 // --------------------------------
-// COLORS - GLOBAL
+// GLOBAL
 // --------------------------------
 body {
   background-color: $color-gray-8;
   color: $base-font-color;
 }
 
-.app-container {
+#app-container {
   background-color: $base-bg-color;
+}
+
+
+// --------------------------------
+// APP HEADER
+// --------------------------------
+.app-header {
+  .icon-btn, .circle-btn {
+    color: $primary-color-light;
+
+    &:hover {
+      color: $primary-text-inverted;
+    }
+
+  }
+}
+
+
+// --------------------------------
+// LISTS
+// --------------------------------
+
+.l-list {
+  & > li {
+    border-bottom: 1px solid $color-gray-7;
+  }
 }
 
 
@@ -29,18 +55,3 @@ body {
    background-color: $primary-color;
   }
 }
-
-// --------------------------------
-// APP HEADER
-// --------------------------------
-.app-header {
-  .icon-btn, .circle-btn {
-    color: $primary-color-light;
-
-    &:hover {
-      color: $primary-text-inverted;
-    }
-
-  }
-}
-
