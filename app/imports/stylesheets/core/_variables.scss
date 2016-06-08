@@ -11,6 +11,7 @@ $app-container-left-right-padding: 2em;
 //App Header
 $app-header-height: 4em;
 $app-header-left-right-padding: $app-container-left-right-padding - 1em;
+$app-header-icon-column: $app-container-left-right-padding + 1em;
 
 //Forms
 //TODO: is this needed?
@@ -22,8 +23,8 @@ $main-content-left-right-padding: $app-container-left-right-padding;
 
 
 // Responsive break-points 
-// $tablet-break-point: 43.750em;
-// $app-height-tablet-up: 90vh;
+$tablet-break-point: 43.750em;
+$app-height-tablet-up: 90vh;
 
 
 // __________________________________
