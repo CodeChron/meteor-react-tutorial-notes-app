@@ -20,7 +20,7 @@ export class SingleFieldSubmit extends React.Component {
   }
 
   render() {
-      return <form onSubmit={this.handleSubmit.bind(this)}>
+      return <form onSubmit={this.handleSubmit.bind(this)} className="l-single-field-submit">
         <input
           type="text"
           placeholder={this.props.placeholder}
