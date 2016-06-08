@@ -47,7 +47,7 @@ export class AutoSaveInput extends React.Component {
               className="l-flex-main-content"
             />
            <div>
-             <button>Done</button>
+             <button className="text-btn">Done</button>
            </div>
         </form>
     :
