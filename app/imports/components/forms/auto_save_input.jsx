@@ -52,7 +52,7 @@ export class AutoSaveInput extends React.Component {
            </div>
         </form>
     :
-      <form className="l-full-width">
+      <form className="l-single-field-input">
         <input
           type="text"
           placeholder={this.props.placeholder}
@@ -60,7 +60,6 @@ export class AutoSaveInput extends React.Component {
           onChange={this.handleOnChange.bind(this)}
           autoFocus={"true"}
           onBlur={this.handleOnBlur.bind(this)}
-          className="l-full-width"
         />
       </form>
   }

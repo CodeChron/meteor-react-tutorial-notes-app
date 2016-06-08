@@ -2,29 +2,32 @@
 // GLOBAL
 // --------------------------------
 body {
-  background-color: $color-gray-8;
+  background-color: $base-bg-color;
   color: $base-font-color;
 }
 
 #app-container {
-  background-color: $base-bg-color;
+  background-color: $app-container-bg-color;
 }
 
 
 // --------------------------------
-// APP HEADER
+// TEXT
 // --------------------------------
-.app-header {
-  .icon-btn, .circle-btn {
-    color: $primary-color-light;
+body {
+  color: $primary-text-color;
+}
 
-    &:hover {
-      color: $primary-text-inverted;
-    }
+// --------------------------------
+// LINKS
+// --------------------------------
+a {
+  color: $link-color;
 
+  &:link, &:visited, &:active {
+    color: $link-color;
   }
 }
-
 
 // --------------------------------
 // LISTS
@@ -37,42 +40,13 @@ body {
 }
 
 
+
+
 // --------------------------------
-// BUTTONS, ICONS
+// BUTTONS
 // --------------------------------
 
-.btn{
-  background-color: $accent-color;
-  border:none;
-  color: $primary-text-inverted;
-
-  &:hover {
-    background-color: darken( $accent-color, 10% );
-  }
-
-  &.btn-google {
-    background-color: $color-google;
-    &:hover {
-      background-color: darken( $color-google, 10% );
-    }
-  }
-  &.btn-facebook {
-    background-color: $color-facebook;
-    &:hover {
-      background-color: darken( $color-facebook, 10% );
-    }
-  }
-}
-
-.btn-secondary {
-  background-color: $color-gray-6;
-  &:hover {
-    background-color: darken($color-gray-6, 20%);
-  }
-}
-
-
-.icon-btn, .circle-btn {
+.icon-btn {
   color: $icon-color;
 
   &:hover {
@@ -80,10 +54,85 @@ body {
   }
 }
 
-.circle-btn {
-  background-color: transparent;
+.btn-main {
+   background-color:$primary-color;
+   color: $base-bg-color;
+}
 
- &:hover {
-   background-color: $primary-color;
+
+.t-inverted {
+  background-color: $primary-color-dark ;
+  color: $base-bg-color;
+  
+  .icon-btn {
+    color: $icon-color-inverted;
+
+    &:hover {
+      color: darken($icon-color-inverted, 20%);
+    }
   }
 }
+
+
+
+// --------------------------------
+// APP HEADER
+// --------------------------------
+// #app-header {
+//   .icon-btn, .circle-btn {
+//     color: $primary-color-light;
+
+//     &:hover {
+//       color: $primary-text-inverted;
+//     }
+//   }
+// }
+
+// --------------------------------
+// BUTTONS, ICONS
+// --------------------------------
+
+// .btn{
+//   background-color: $accent-color;
+//   border:none;
+//   color: $primary-text-inverted;
+
+//   &:hover {
+//     background-color: darken( $accent-color, 10% );
+//   }
+// }
+
+  // &.btn-google {
+  //   background-color: $color-google;
+  //   &:hover {
+  //     background-color: darken( $color-google, 10% );
+  //   }
+  // }
+  // &.btn-facebook {
+  //   background-color: $color-facebook;
+  //   &:hover {
+  //     background-color: darken( $color-facebook, 10% );
+  //   }
+  // }
+// .btn-secondary {
+//   background-color: $color-gray-6;
+//   &:hover {
+//     background-color: darken($color-gray-6, 20%);
+//   }
+// }
+
+// .circle-btn {
+//   color: $icon-color;
+
+//   &:hover {
+//     color: darken($icon-color, 20%);
+//   }
+// }
+
+// .circle-btn {
+//   background-color: transparent;
+
+//  &:hover {
+//    background-color: $primary-color;
+//   }
+// }

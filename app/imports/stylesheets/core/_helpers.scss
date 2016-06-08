@@ -1,10 +1,12 @@
-// --------------------------------
-// LAYOUT
-// --------------------------------
-
 .l-centered {
 	text-align: center;
 }
 .l-full-width {
 	width: 100%;
+}
+
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
 }

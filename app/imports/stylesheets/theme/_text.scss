@@ -1,11 +1,3 @@
-// HELPERS
-@mixin truncate_text($max: 100%) {
-  max-width: $max;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 // --------------------------------
 // BASE
 // --------------------------------
@@ -13,13 +5,6 @@ body {
   font-size: $base-font-size;
   font-family: $base-font;
   font-weight: 300;
-  color: $primary-text-color;
-}
-.main-content {
-  font-size: $base-font-size;
-}
-.text-inverted {
-  color: $primary-text-inverted;
 }
 
 // --------------------------------
@@ -30,69 +15,15 @@ h1 {
   // color: $primary-color-dark;
 	// font-weight: 200;
 }
-// h2 {
-//   font-size: $heading-2;
-//   // color: $primary-color;
-//   font-weight: 200;
-//   margin-bottom: 0;
 
-// }
-
-// h3 { font-size: $heading-3; }
-// h4 { font-size: $heading-4; }
-// h5 { font-size: $heading-5; }
-// h6 { font-size: $heading-6; }
 
 // --------------------------------
 // LINKS
 // --------------------------------
 a {
   text-decoration: none;
-  color: $link-color;
 
-  &:link, &:visited, &:active {
-    color: $link-color;
-  }
- &:hover {
-  text-decoration: underline;
- }
-}
-
-// --------------------------------
-// MISC TEXT TYPES
-// --------------------------------
-.clickable {
   &:hover {
-    cursor: pointer;
+    text-decoration: underline;
   }
 }
-.help-text {
-  font-size: $small-text;
-  font-style: italic;
-  color: $color-gray-5;
-}
-.secondary-text {
-  color: $color-gray-5;
-
-    a {
-  color:  $color-gray-5;
-
-    &:link, &:visited, &:active {
-      color:  $color-gray-5;
-    }
-  }
-}
-
-.small-text {
-  font-size: $small-text;
-}
-
-// .footer-text {
-//   font-size: 1.4em;
-// }
-
-// @media screen and (min-width: $tablet-break-point){
-//   .footer-text {
-//    font-size: 1em;
-//   }
-// }
