@@ -19,7 +19,7 @@ export class ClickToEdit extends React.Component {
     return this.state.editMode?
       <AutoSaveInput doneEditing={this.toggleEditMode.bind(this)} {...this.props} />
       :
-      <span className="clickable" onClick={this.toggleEditMode.bind(this)}>{this.props.clickableComponent}</span> 
+      <span className="helper-clickable" onClick={this.toggleEditMode.bind(this)}>{this.props.clickableComponent}</span> 
   }
 }
 

@@ -36,7 +36,7 @@ export const NoteDetailsPage = (props) => {
          </div>
 
   } else {
-     return <div id="app-container" className="l-app-full-height l-app-centered">
+     return <div id="app-container">
          <div id="main-content">
              <LoadingFeedback />
           </div>

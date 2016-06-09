@@ -1,31 +1,24 @@
-//CORE
-// __________________________________________________________________
+// ******* CORE ******* 
 @import "core/normalize"; // "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
 @import "core/base";
 @import "core/variables";
 @import "core/helpers";
 
-//LAYOUTS
-// __________________________________________________________________
+// *******  LAYOUTS  *******
 @import "layouts/flex_layouts";
 @import "layouts/full_height";
 @import "layouts/app_container";
 @import "layouts/app_header";
 @import "layouts/main_content";
 
-//COMPONENTS 
-// __________________________________________________________________
-@import "components/buttons/btn";
-@import "components/forms/forms";
-@import "components/lists/list";
+// ******* COMPONENTS *******  
+@import "components/buttons";
+@import "components/forms";
+@import "components/lists";
 
-//THEME 
-// __________________________________________________________________
+// ******* THEME *******  
 @import "theme/text";
 @import "theme/colors";
 
-
-//VENDOR 
-// 3rd party styling 
-// __________________________________________________________________
+// ******* VENDOR (3rd party styling) ******* 
 @import "vendor/loader";

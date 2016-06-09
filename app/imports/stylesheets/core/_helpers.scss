@@ -1,17 +1,17 @@
-.l-centered {
+.helper-centered {
 	text-align: center;
 }
-.l-full-width {
+.helper-full-width {
 	width: 100%;
 }
-.l-top-padding {
+.helper-top-padding {
 	padding-top: 1em;
 }
 
-.l-bottom-spacing {
+.helper-bottom-spacing {
 	margin-bottom: 1em;
 }
-.clickable {
+.helper-clickable {
   &:hover {
     cursor: pointer;
   }

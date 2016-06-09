@@ -36,23 +36,23 @@ export class AutoSaveInput extends React.Component {
 
   displayEditor(multiLineEditor){
     return multiLineEditor?
-      <form className="l-flex-main-content l-flex-column l-content-editor">
+      <form className="c-content-editor flex-main-content flex-column ">
             <textarea
               placeholder={this.props.placeholder}
               value={this.state.contentValue}
               onChange={this.handleOnChange.bind(this)}
               autoFocus={"true"}
               onBlur={this.handleOnBlur.bind(this)}
-              className="l-flex-main-content invisible-textarea"
+              className="flex-main-content color-invisible-textarea"
             />
-           <div className="l-flex-row l-flex-centered l-flex-vertical-middle">
-             <div className="l-flex-main-content l-centered t-top-divider l-top-padding">
+           <div className="flex-row flex-centered flex-verticamiddle">
+             <div className="flex-main-content helper-centered color-top-divider helper-top-padding">
                <button className="text-btn btn-main">Done</button>
              </div>
            </div>
         </form>
     :
-      <form className="l-single-field-input">
+      <form className="c-single-field-submit">
         <input
           type="text"
           placeholder={this.props.placeholder}

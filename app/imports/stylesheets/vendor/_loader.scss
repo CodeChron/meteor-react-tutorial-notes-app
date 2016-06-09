@@ -2,27 +2,27 @@
 Src: http://projects.lukehaas.me/css-loaders/
 */
 
-.loader,
-.loader:before,
-.loader:after {
+.vendor-loader,
+.vendor-loader:before,
+.vendor-loader:after {
   background: #f0eff1;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
-.loader:before,
-.loader:after {
+.vendor-loader:before,
+.vendor-loader:after {
   position: absolute;
   top: 0;
   content: '';
 }
-.loader:before {
+.vendor-loader:before {
   left: -1.5em;
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-.loader {
+.vendor-loader {
   color: #f0eff1;
   text-indent: -9999em;
   margin: 88px auto;
@@ -34,7 +34,7 @@ Src: http://projects.lukehaas.me/css-loaders/
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-.loader:after {
+.vendor-loader:after {
   left: 1.5em;
 }
 @-webkit-keyframes load1 {

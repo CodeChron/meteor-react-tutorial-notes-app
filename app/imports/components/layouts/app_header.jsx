@@ -2,10 +2,10 @@ import React from 'react'
 
 export const AppHeader = (props) => {
 
-	return  <div id="app-header" className="l-flex-row l-flex-centered l-flex-vertical-middle t-inverted">
-	          <div className="l-flex-icon-column">{props.leftCol}</div>
-	          <div className="l-flex-main-content">{props.middleCol}</div>
-	          <div className="l-flex-icon-column">{props.rightCol}</div>
+	return  <div id="app-header" className="flex-row flex-centered flex-vertical-middle color-inverted">
+	          <div className="flex-icon-column">{props.leftCol}</div>
+	          <div className="flex-main-content">{props.middleCol}</div>
+	          <div className="flex-icon-column">{props.rightCol}</div>
 	        </div>
 }
 

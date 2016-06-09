@@ -1,8 +1,4 @@
-// _________________________________
-//
-// FULL HEIGHT CENTERED VIEWPORT
-// _________________________________
-
+// ******* FULL HEIGHT VIEWPORT ******* 
 html {
   height: 100%; //While this is base styling, we are including it in the layout stylesheet because it is needed for a full height layout
 }
@@ -13,7 +9,6 @@ body {
   min-height: 100vh; //set the app container to fill the viewport height and exceed it if the content requires it
   @include flex-column;
 }
-
 #main-content {
 	flex: 1;
 	@include flex-column;

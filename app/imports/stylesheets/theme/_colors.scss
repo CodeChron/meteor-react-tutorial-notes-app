@@ -1,6 +1,5 @@
-// --------------------------------
-// GLOBAL
-// --------------------------------
+// *******  GLOBAL  *******
+
 body {
   background-color: $base-bg-color;
   color: $base-font-color;
@@ -11,16 +10,13 @@ body {
 }
 
 
-// --------------------------------
-// TEXT
-// --------------------------------
+// *******  TEXT  *******
 body {
   color: $primary-text-color;
 }
 
-// --------------------------------
-// LINKS
-// --------------------------------
+
+// *******  LINKS  *******
 a {
   color: $link-color;
 
@@ -29,20 +25,24 @@ a {
   }
 }
 
-// --------------------------------
-// LISTS
-// --------------------------------
 
-.l-list {
+// *******  LISTS  *******
+
+.list {
   & > li {
     border-bottom: $divider-line;
   }
 }
 
+// *******  FORMS  *******
+.color-invisible-textarea {
+  outline: none;
+  resize: none;
+  border:none;
+}
 
-// --------------------------------
-// BUTTONS
-// --------------------------------
+
+// *******  BUTTONS  *******
 
 .icon-btn {
   color: $icon-color;
@@ -51,14 +51,11 @@ a {
     color: darken($icon-color, 20%);
   }
 }
-
 .btn-main {
    background-color:$primary-color;
    color: $base-bg-color;
 }
-
-
-.t-inverted {
+.color-inverted {
   background-color: $primary-color-dark ;
   color: $base-bg-color;
   
@@ -72,10 +69,9 @@ a {
 }
 
 
-// --------------------------------
-// DIVIDERS
-// --------------------------------
 
-.t-top-divider {
+// *******  BORDERS/DIVIDERS  *******
+
+.color-top-divider {
   border-top: $divider-line;
 }

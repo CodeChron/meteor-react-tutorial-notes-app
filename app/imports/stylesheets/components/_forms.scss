@@ -1,4 +1,4 @@
-form.l-single-field-input {
+form.c-single-field-submit {
   width: 100%;
   height: 100%;
 
@@ -12,13 +12,7 @@ form.l-single-field-input {
   }	
 }
 
-textarea.invisible-textarea {
-  outline: none;
-  resize: none;
-  border:none;
-}
-
-form.l-content-editor {
+.c-content-editor {
 	padding:0;
 	
 	textarea {

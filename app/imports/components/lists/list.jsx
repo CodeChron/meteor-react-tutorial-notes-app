@@ -6,14 +6,14 @@ import { SingleFieldSubmit }  from '../forms/single_field_submit'
 export const List = (props) => {
 
 	 const listFeatures = {
-  	itemTitle: (item) => <span className="l-flex-main-content">{item.title}</span>,
+  	itemTitle: (item) => <span className="flex-main-content">{item.title}</span>,
   	addItem: () =>  <li><SingleFieldSubmit {...props} /></li>,
-  	linkItem: (item) => <a href={FlowRouter.path(props.linkRoute , {_id: item._id})} className="l-flex-main-content">{item.title}</a>,
-  	deleteItem: (item) => <span className="l-flex-icon-column"><DeleteBtn handleDelete={props.handleDeleteNote}  size={"btn-small"} itemToDelete={item} /></span>
+  	linkItem: (item) => <a href={FlowRouter.path(props.linkRoute , {_id: item._id})} className="flex-main-content">{item.title}</a>,
+  	deleteItem: (item) => <span className="flex-icon-column"><DeleteBtn handleDelete={props.handleDeleteNote}  size={"btn-small"} itemToDelete={item} /></span>
 	}
   
   const displayList = props.collection.map((item) => 
-    	<li key={item._id} className="l-flex-vertical-middle">
+    	<li key={item._id} className="flex-vertical-middle">
     	  {props.linkItem? 
 	 	      listFeatures.linkItem(item)
 	 	      :
@@ -26,7 +26,7 @@ export const List = (props) => {
 	 	    }
     	</li>)
 
-  return <ul className="l-list">
+  return <ul className="list">
       	  {props.addItem? 
 	 	        listFeatures.addItem()
 	 	      :

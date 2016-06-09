@@ -1,49 +1,32 @@
-.l-flex-main-content {
+// ******* FLEX MAIN CONTENT ******* 
+.flex-main-content {
   flex: 1;
 }
 
-// _________________________________
-//
-// FLEX COLUMN 
-// _________________________________
-
+// ******* FLEX COLUMN ******* 
 @mixin flex-column {
   display: flex;
   flex-flow: column;
 }
-
-.l-flex-column {
+.flex-column {
   @include flex-column;
 }
 
 
-// _________________________________
-//
-// FLEX ROW with options for vertical/horizontal centering 
-// _________________________________
-
+// ******* FLEX ROW ******* 
 @mixin flex-row {
   display: flex;
   flex-flow: row nowrap;
  
-  &.l-flex-centered {
+  &.flex-centered {
   	 justify-content: center;
   }  
-
-  &.l-flex-vertical-middle {
+  &.flex-vertical-middle {
   	align-items:center;
   }  
-
-  // .l-flex-icon-column {
-  // 	 width: $l-flex-icon-column-width;
-  // }
-  // .l-flex-phantom-columns {
-  //   margin-left: 20%;
-  //   margin-right: 20%; 
-  // }
 }
 
-.l-flex-row {
+.flex-row {
 	@include flex-row;
 }
 
