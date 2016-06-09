@@ -29,7 +29,8 @@ export default createContainer(
 	  return {
 	  	note,
 	  	handleUpdateNote,
-	  	subsReady: sub.ready()
+	  	subsReady: sub.ready(),
+	  	useMarkdown: true
 	  }
   },
   App

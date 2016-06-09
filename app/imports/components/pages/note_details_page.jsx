@@ -26,7 +26,7 @@ export const NoteDetailsPage = (props) => {
 
   	const
   	  noteTitleComponent = <PageTitle title={props.note.title} />,
-	    noteContentComponent = <ContentBlock contentValue={props.note.content} emptyMsg={"Empty Note"} />
+	    noteContentComponent = <ContentBlock contentValue={props.note.content} emptyMsg={"Empty Note"} {...props} />
 
 	  return <div id="app-container">
              <AppHeader leftCol={backBtn} middleCol={displayEditableComponent(noteTitleComponent, props.note.title, "title", false)} />
