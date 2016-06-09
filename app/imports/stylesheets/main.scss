@@ -1,21 +1,9 @@
-// VARIABLES, MIXINS, and HELPERS
-// Variables and functions we might use across multiple stylesheets
+//CORE
 // __________________________________________________________________
+@import "core/normalize"; // "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
+@import "core/base";
 @import "core/variables";
 @import "core/helpers";
-
-
-// NORMALIZE
-// "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
-// __________________________________________________________________
-@import "core/normalize";
-
-
-//BASE
-//Styles applied directly to HTML selectors
-// __________________________________________________________________
-@import "core/base";
-
 
 //LAYOUTS
 // __________________________________________________________________
@@ -25,30 +13,19 @@
 @import "layouts/app_header";
 @import "layouts/main_content";
 
-
-
 //COMPONENTS 
-//This combines 'modules' and 'state' in SMACCS.
 // __________________________________________________________________
 @import "components/buttons/btn";
-// @import "components/buttons/circle_btn";
 @import "components/forms/forms";
-// @import "components/forms/single_field_submit";
 @import "components/lists/list";
 
-//@import "components/menus/options_menu";
-
-
 //THEME 
-//Define color, typography 
 // __________________________________________________________________
 @import "theme/text";
 @import "theme/colors";
-
 
 
 //VENDOR 
 // 3rd party styling 
 // __________________________________________________________________
 @import "vendor/loader";
-//@import "vendor/s-alert";
