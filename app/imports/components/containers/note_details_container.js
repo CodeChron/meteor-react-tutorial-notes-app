@@ -12,7 +12,7 @@ export default createContainer(
 		  ,
 		  sub = Meteor.subscribe('note.details', noteId)
 		  ,
-			note = sub.ready()? Note.findOne({_id: noteId }) : {}
+			note = sub.ready()? Note.findOne({ _id: noteId }) : {}
 			,
 			handleUpdateNote = (collection, field, value) => {
 			  const doc = {}
@@ -29,8 +29,8 @@ export default createContainer(
 	  return {
 	  	note,
 	  	handleUpdateNote,
-	  	subsReady: sub.ready(),
-	  	useMarkdown: true
+	  	subsReady:       sub.ready(),
+	  	useMarkdown:     true
 	  }
   },
   App

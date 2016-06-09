@@ -9,12 +9,12 @@ const Notes = new Mongo.Collection('notes')
 //By default a Mongo db collection does not impose any type of structure.  I can insert a value into a field named 'foo' and if the field doesn't exist, Mongo will just create it.  By using this package, Astronomy - URL - we can explicitly model our data.  There is much more, like validation and other niceties.
 
 export const Note = Class.create({
-	name: 'Note',
-	collection: Notes,
+	name:        'Note',
+	collection:   Notes,
 	fields: {
-    title: String,
+    title:   String,
     content: {
-      type: String,
+      type:    String,
       default: ''
     },
     updatedAt: Date 
@@ -26,7 +26,7 @@ export const Note = Class.create({
 Meteor.methods({
 
   //The naming of these methods are purely a convention, ie we could call this 'foo' if we wanted.  However, it's key to have a good naming convention here, since the Meteor.methods is not specific to Notes. In other words, if were to just call this the 'create' method, that could become a problem if we had another collection and also wanted a create method there as well. Therefore we prefix it with the collection name to ensure uniqueness
-	'note.create': (title) => {
+	'note.create': title => {
 
       const note = new Note()
 			note.set({
@@ -37,7 +37,7 @@ Meteor.methods({
 			return note
   }
   ,
-	'note.update': (note) => {
+	'note.update': note => {
 			note.set({
 			  updatedAt: new Date()
 			})
@@ -45,5 +45,5 @@ Meteor.methods({
 			return note
   }
   ,
-	'note.delete': (id) => Note.remove(id)
+	'note.delete': id => Note.remove(id)
 })

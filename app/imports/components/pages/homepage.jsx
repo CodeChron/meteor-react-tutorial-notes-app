@@ -8,7 +8,7 @@ import { LoadingFeedback } from '../utility/loading_feedback'
 // Yes, it does look like just a normal (ES6) JS function.  However, React is rewriting the parts that look like HTML
 //We can use this for 'stateless' components
 
-export const Homepage = (props) => {
+export const Homepage = props => {
 
 	const
   //Here we are instantiating a PageTitle component and passing a value for the 'title' prop.  I recommend heading over to /content/page_title to see how this corresponds to the component itself.
@@ -19,12 +19,12 @@ export const Homepage = (props) => {
 
     //TODO: pass in listProps
     // You could have done this: displayList = () => props.subsReady? - DON'T, this is bad. You are calling a variable directly that is outside the scope of the function rather than passing it in as an argument. Avoid doing so when possible.
-	  displayList = (listProps) => listProps.subsReady? 
+	  displayList = args => args.subsReady? 
       <List
-        collection={listProps.notes}
+        collection={args.notes}
         placeholder={"New Note..."}
-        handleSubmit={listProps.handleCreateNote}
-        {...listProps}
+        handleSubmit={args.handleCreateNote}
+        {...args}
       />
       : 
       <LoadingFeedback />

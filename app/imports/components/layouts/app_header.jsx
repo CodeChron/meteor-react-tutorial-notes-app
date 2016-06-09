@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AppHeader = (props) => {
+export const AppHeader = props => {
 
 	return  <div id="app-header" className="flex-row flex-centered flex-vertical-middle color-inverted">
 	          <div>{props.leftCol}</div>
@@ -10,7 +10,7 @@ export const AppHeader = (props) => {
 }
 
 AppHeader.propTypes = {
-  leftCol: React.PropTypes.object,
+  leftCol:   React.PropTypes.object,
   middleCol: React.PropTypes.object,
-  rightCol: React.PropTypes.object
+  rightCol:  React.PropTypes.object
 }

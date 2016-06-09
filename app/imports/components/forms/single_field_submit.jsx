@@ -31,11 +31,11 @@ export class SingleFieldSubmit extends React.Component {
   }
 }
 SingleFieldSubmit.propTypes = {
-  handleSubmit: React.PropTypes.func.isRequired,
-  placeholder: React.PropTypes.string
+  handleSubmit:  React.PropTypes.func.isRequired,
+  placeholder:   React.PropTypes.string
 }
 
 SingleFieldSubmit.defaultProps = {
-  inputValue:  ""  ,
-  placeholder: "New..."
+  inputValue:    ""  ,
+  placeholder:   "New..."
 }

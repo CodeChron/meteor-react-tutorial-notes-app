@@ -6,7 +6,7 @@ import { ClickToEdit } from '../forms/click_to_edit'
 import { LoadingFeedback } from '../utility/loading_feedback'
 import { IconBtn } from '../buttons/icon_btn'
 
-export const NoteDetailsPage = (props) => {
+export const NoteDetailsPage = props => {
 
 	const
     handleBackBtnClick = () => history.back()

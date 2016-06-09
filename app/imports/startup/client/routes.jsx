@@ -31,7 +31,7 @@ FlowRouter.route('/', {
       // Explain what is happening here: we have a data container. The data container returns reactive data and other attributes we can set in the form of a 'props' object
       //Then, we pass in that object as an argument when 'page(props)' gets called. (See app)
       // In turn that object gets passed into the homepage component using {...props} which effectively passes along all props that are passed to it into the component.  It is the '...' part that does the magic here. To learn more, read about ES6 spread operators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator  
-      page: (props) => <Homepage {...props} />
+      page: props => <Homepage {...props} />
       //The above <Homepage ... /> part might look funny. This is JSX syntax and allows us to write HTML-like syntax.  The react package we imported translates this into plain JavaScript.
     })
     //  To learn more about using data with React and FlowRouter in a Meteor app, check out: http://coderchronicles.org/2016/04/15/using-data-in-meteor-with-react-and-flowrouter/
@@ -44,7 +44,7 @@ FlowRouter.route('/notes/:_id', {
   name: 'noteDetails',
   action() {
     mount(NoteDetailsContainer, {
-      page: (props) => <NoteDetailsPage {...props} />
+      page: props => <NoteDetailsPage {...props} />
     })
   }
 })

@@ -24,8 +24,8 @@ export class ClickToEdit extends React.Component {
 }
 
 ClickToEdit.propTypes = { 
-  clickableComponent: React.PropTypes.object.isRequired,
-  editMode: React.PropTypes.bool
+  clickableComponent:  React.PropTypes.object.isRequired,
+  editMode:            React.PropTypes.bool
 }
 
 ClickToEdit.defaultProps = {
