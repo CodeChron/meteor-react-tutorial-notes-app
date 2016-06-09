@@ -38,6 +38,4 @@ Meteor.methods({
   }
   ,
 	'note.delete': (id) => Note.remove(id)
-  
-
 })

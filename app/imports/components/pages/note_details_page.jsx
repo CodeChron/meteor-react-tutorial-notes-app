@@ -29,17 +29,18 @@ export const NoteDetailsPage = (props) => {
 	    noteContentComponent = <ContentBlock contentValue={props.note.content} emptyMsg={"Empty Note"} />
 
 	  return <div id="app-container">
-           <AppHeader leftCol={backBtn} middleCol={displayEditableComponent(noteTitleComponent, props.note.title, "title", false)} />
-           <div id="main-content">
-           {displayEditableComponent(noteContentComponent, props.note.content, "content", true)}
+             <AppHeader leftCol={backBtn} middleCol={displayEditableComponent(noteTitleComponent, props.note.title, "title", false)} />
+               <div id="main-content">
+                 {displayEditableComponent(noteContentComponent, props.note.content, "content", true)}
+             </div>
            </div>
-         </div>
 
   } else {
+    
      return <div id="app-container">
-         <div id="main-content">
-             <LoadingFeedback />
-          </div>
-        </div>
+              <div id="main-content">
+               <LoadingFeedback />
+              </div>
+            </div>
   }
 }

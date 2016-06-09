@@ -25,7 +25,6 @@ export class AutoSaveInput extends React.Component {
 
   handleOnChange(e) {
     const updatedValue = e.target.value
-
     this.setState({contentValue: updatedValue})
     this.handleUpdates(updatedValue)
   }
@@ -36,7 +35,7 @@ export class AutoSaveInput extends React.Component {
 
   displayEditor(multiLineEditor){
     return multiLineEditor?
-      <form className="c-content-editor flex-main-content flex-column ">
+      <form className="c-content-editor flex-main-content flex-column">
             <textarea
               placeholder={this.props.placeholder}
               value={this.state.contentValue}
@@ -45,9 +44,9 @@ export class AutoSaveInput extends React.Component {
               onBlur={this.handleOnBlur.bind(this)}
               className="flex-main-content color-invisible-textarea"
             />
-           <div className="flex-row flex-centered flex-verticamiddle">
+           <div className="flex-row flex-centered flex-vertical-middle">
              <div className="flex-main-content helper-centered color-top-divider helper-top-padding">
-               <button className="text-btn btn-main">Done</button>
+               <button className="btn-main">Done</button>
              </div>
            </div>
         </form>

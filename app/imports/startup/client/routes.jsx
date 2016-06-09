@@ -6,7 +6,6 @@ import NoteDetailsContainer from '/imports/components/containers/note_details_co
 import { Homepage } from '/imports/components/pages/homepage'
 import { NoteDetailsPage } from '/imports/components/pages/note_details_page'
 
-
 FlowRouter.route('/', {
   name: 'homepage',
   action() {

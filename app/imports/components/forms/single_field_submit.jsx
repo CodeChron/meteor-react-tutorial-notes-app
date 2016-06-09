@@ -20,14 +20,14 @@ export class SingleFieldSubmit extends React.Component {
   }
 
   render() {
-      return <form onSubmit={this.handleSubmit.bind(this)} className="c-single-field-submit">
-        <input
-          type="text"
-          placeholder={this.props.placeholder}
-          value={this.state.inputValue}
-          onChange={this.updateInputValue.bind(this)}
-        />
-      </form>
+    return <form onSubmit={this.handleSubmit.bind(this)} className="c-single-field-submit">
+      <input
+        type="text"
+        placeholder={this.props.placeholder}
+        value={this.state.inputValue}
+        onChange={this.updateInputValue.bind(this)}
+      />
+    </form>
   }
 }
 SingleFieldSubmit.propTypes = {

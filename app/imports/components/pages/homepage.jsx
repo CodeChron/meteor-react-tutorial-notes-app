@@ -22,8 +22,7 @@ export const Homepage = (props) => {
   return <div id="app-container">
            <AppHeader middleCol={pageTitle} />
            <div id="main-content">
-
-           {displayList(props)}
+             {displayList(props)}
            </div>
          </div>	
 }
