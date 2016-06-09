@@ -3,16 +3,12 @@ import { IconBtn } from './icon_btn'
 
 export const DeleteBtn = (props) => {
 
-  const handleDelete = (item) => {
-
-    const confirmDelete = confirm(props.confirmMsg)
-    
-    if (confirmDelete) {
-      props.handleDelete(item)
-    }
+  const handleDelete = (item, msg, handler) => {
+    const confirmDelete = confirm(msg)
+    if (confirmDelete) { handler }
   }
 
-  return <IconBtn handleClick={()=> handleDelete(props.itemToDelete)}
+  return <IconBtn handleClick={()=> handleDelete(props.itemToDelete, props.confirmMsg, props.handleDelete(props.itemToDelete))}
             {...props}
           />
 }
