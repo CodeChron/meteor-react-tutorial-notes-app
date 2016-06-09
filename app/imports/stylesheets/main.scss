@@ -1,3 +1,14 @@
+//This is an example of a mini css framework.  It's created from scratch, rather than using something like Bootstrap.  One of the biggest mistakes you can make when learning to code is to rely on CSS frameworks.  If you do that, you're not going to learn how to write your own css and how css actually works.
+
+// I think this is a pretty decent css structure.  It is loosely based on the 'smaccs' structure - learn more at https://smacss.com/
+
+//Here, we have one 'master' stylesheet and then import other 'partial' stylesheets into this one. As with imports, the order in which we import the files matter.
+
+// This css uses Sass, which is a CSS pre-processor. Learn more at http://sass-lang.com/
+// To use it, you'll need to install a Sass package of some sort.  I recommend this one, which also gives you support for autoprefixing: https://github.com/fourseven/meteor-scss/
+
+//NEXT: Take a minute to browse through some of the css files, then let's look at our routes file, where we define the pages and URLs in our app. Go to /imports/startup/client/routes.jsx
+
 // ******* CORE ******* 
 @import "core/normalize"; // "makes browsers render all elements more consistently and in line with modern standards" - https://necolas.github.io/normalize.css/
 @import "core/base";
