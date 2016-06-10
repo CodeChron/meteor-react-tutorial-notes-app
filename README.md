@@ -16,3 +16,7 @@ I recommend trying to build your own version of the app while reviewing the code
 - Defining and updating React component state
 
 and more...
+
+
+## Questions, Comments, Feedback?
+Leave a comment at the associated [blog post](http://coderchronicles.org/2016/06/10/build-a-simple-note-taking-app-with-meteor-and-react/) or [ping me](https://twitter.com/codechron) on Twitter.
