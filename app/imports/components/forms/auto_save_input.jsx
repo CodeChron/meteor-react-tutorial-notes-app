@@ -10,23 +10,24 @@ export class AutoSaveInput extends React.Component {
     }
   }
 
-  handleUpdates(collection, field, updatedValue){
+  handleUpdates(updatedValue){
 
     const
       updateInterval = 250,
       options = { 'maxWait': 2000 },
-      submitUpdates = (collection, field, value) => {
-        this.props.handleUpdates(collection, field, value)
-      },
-      autoSaveChanges = debounce(submitUpdates, updateInterval, options)
+      autoSaveChanges = debounce(updatedValue => 
+        this.props.handleUpdates(this.props.note, this.props.field, updatedValue),
+        updateInterval,
+        options
+      )
       
-    autoSaveChanges(collection, field, updatedValue)
+    autoSaveChanges(updatedValue)
   }
 
   handleOnChange(e) {
     const updatedValue = e.target.value
     this.setState({contentValue: updatedValue})
-    this.handleUpdates(this.props.note, this.props.field,updatedValue)
+    this.handleUpdates(updatedValue)
   }
 
   handleOnBlur() {
