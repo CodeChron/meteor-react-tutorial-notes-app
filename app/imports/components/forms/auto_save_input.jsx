@@ -10,7 +10,7 @@ export class AutoSaveInput extends React.Component {
     }
   }
 
-  handleUpdates(updatedValue){
+  handleUpdates(collection, field, updatedValue){
 
     const
       updateInterval = 250,
@@ -20,13 +20,13 @@ export class AutoSaveInput extends React.Component {
       },
       autoSaveChanges = debounce(submitUpdates, updateInterval, options)
       
-    autoSaveChanges(this.props.note, this.props.field, updatedValue)
+    autoSaveChanges(collection, field, updatedValue)
   }
 
   handleOnChange(e) {
     const updatedValue = e.target.value
     this.setState({contentValue: updatedValue})
-    this.handleUpdates(updatedValue)
+    this.handleUpdates(this.props.note, this.props.field,updatedValue)
   }
 
   handleOnBlur() {
