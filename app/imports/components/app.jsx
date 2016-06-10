@@ -4,7 +4,6 @@ import React from 'react'
 
 //Why are we doing this?  Well, because FlowRouter requires that you have a top-level 'layout' which you wrap around page-specific regions. This is a model that is designed more for Template-based UI frameworks, like Blaze, and doesn't really jive with the React model. Therefore, we basically make this part as tiny as possible and just have it pass on data.
 
-
 export const App = (props) => props.page(props)
 
 

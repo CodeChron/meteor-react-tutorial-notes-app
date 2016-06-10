@@ -3,7 +3,6 @@
   flex: 1;
 }
 
-
 //Here, we are first creating a 'mixin' or snippet of css that we can 'mix in' with other css.  Then, we also define the mixin as a css class, so that we can use it as a stand-alone.
 // ******* FLEX COLUMN ******* 
 @mixin flex-column {

@@ -2,10 +2,10 @@
 
 // I think this is a pretty decent css structure.  It is loosely based on the 'smaccs' structure - learn more at https://smacss.com/
 
-//Here, we have one 'master' stylesheet and then import other 'partial' stylesheets into this one. As with imports, the order in which we import the files matter.
+//Here, we have one 'master' stylesheet and then import other 'partial' stylesheets into this one. As with imports, the order in which we import matters.
 
 // This css uses Sass, which is a CSS pre-processor. Learn more at http://sass-lang.com/
-// To use it, you'll need to install a Sass package of some sort.  I recommend this one, which also gives you support for autoprefixing: https://github.com/fourseven/meteor-scss/
+// To use it, you'll need to install a Sass package.  I recommend this one, which also gives you support for autoprefixing: https://github.com/fourseven/meteor-scss/
 
 //NEXT: Take a minute to browse through some of the css files, then let's look at our routes file, where we define the pages and URLs in our app. Go to /imports/startup/client/routes.jsx
 
