@@ -9,7 +9,7 @@ import { Note } from '../../collections/notes'
 import { App } from '../app'
 
 //Here is an example of a default module export.  When importing this you would not use curly braces and you can name it anything you want on import.
-export default createContainer(
+export default HomepageContainer = createContainer(
 	() => {
 
 		const
