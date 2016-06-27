@@ -2,7 +2,7 @@
 
 ![side-by-side-550-px](https://cloud.githubusercontent.com/assets/819213/15934553/013d3d50-2e32-11e6-86ec-5cc5309468ee.jpg)
 
-This is a simple app that can be a great starting point for a beginner programmer who wants to take their JS knowledged to the next level.
+This is a simple app that can be a great starting point for a beginner programmer who wants to take their JS knowledge to the next level.
 
 Just [clone the repo](https://help.github.com/articles/cloning-a-repository/), and follow the comments in the code. Start at [/app/client/main.js](https://github.com/CodeChron/meteor-react-tutorial-notes-app/blob/master/app/client/main.js)
 
