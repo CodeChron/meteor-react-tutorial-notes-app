@@ -46,7 +46,7 @@ export const NotesListContainer = createContainer(props => {
 
 		//This is where we return, or make available data to child components. The single token object syntax (eg 'notes') is a feature of ES6, and is shorthand for 'token:token' eg 'notes:notes'  
 	  return {
-      component: <List collection={notes} />,
+      component: <List collection={notes} addItem={addItem} linkRoute={"noteDetails"} deleteItem={true} linkItem={true} handleDelete={handleDelete} />,
       subReady
 
 	  }

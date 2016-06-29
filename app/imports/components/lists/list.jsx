@@ -11,14 +11,14 @@ export const List = props => {
 	const listFeatures = {
   	itemTitle: item => <span className="flex-main-content">{item.title}</span>,
   	linkItem: (item, linkRoute) => <a href={FlowRouter.path(linkRoute , { _id: item._id })} className="flex-main-content">{item.title}</a>,
-  	deleteItem: (item, handleDelete) => <DeleteBtn handleDelete={handleDelete} size={"btn-small"} itemToDelete={item} />
+  	deleteBtn: (item, handleDelete) => <DeleteBtn handleDelete={handleDelete} size={"btn-small"} itemToDelete={item} />
 	}
   
   //This is where we generate our list, using the map() method, which returns an array that will be assigned to 'displayList'  Here, we are using the ternary operator to check if a given optional feature, eg 'linkItem' has been turned on.  See the top-level container component, in which turn these features on by returning true for the corresponding props.
   const displayList = props.collection.map((item) => 
     	<li key={item._id} className="flex-vertical-middle">
     	  {props.linkItem? listFeatures.linkItem(item, props.linkRoute) : listFeatures.itemTitle(item)}
-	 	    {props.deleteItem? listFeatures.deleteItem(item, props.handleDeleteNote) : null }
+	 	    {props.deleteItem? listFeatures.deleteBtn(item, props.handleDelete) : null }
     	</li>)
 
   return <ul className="list">
