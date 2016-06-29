@@ -1,7 +1,6 @@
 import React from 'react'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import { DeleteBtn }  from '../buttons/delete_btn'
-import { SingleFieldSubmit }  from '../forms/single_field_submit'
 
 //This is a somewhat more advanced but still 'stateless' component
 export const List = props => {
