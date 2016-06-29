@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const Loading = () => <div className="vendor-loader">Loading...</div>
+export const Loading = () => <div className="loading-pulse">Loading...</div>

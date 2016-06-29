@@ -2,17 +2,18 @@ import { createContainer } from 'meteor/react-meteor-data'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import { Meteor } from 'meteor/meteor'
 import { Note } from '../../collections/notes'
-import { App } from '../app'
+import { NoteDetailsPage } from '../pages/note_details_page'
 
-export default createContainer(
-	() => {
+export const NoteDetailsContainer = createContainer(() => {
 		
 		const
 		  noteId = FlowRouter.getParam('_id')
-		  ,
+		,
 		  sub = Meteor.subscribe('note.details', noteId)
-		  ,
-			note = sub.ready()? Note.findOne({ _id: noteId }) : {}
+		,
+      subReady = sub.ready()
+    ,
+			note = subReady? Note.findOne({ _id: noteId }) : {}
 			,
 			handleUpdateNote = (collection, field, value) => {
 			  const doc = {}
@@ -29,9 +30,8 @@ export default createContainer(
 	  return {
 	  	note,
 	  	handleUpdateNote,
-	  	subsReady:       sub.ready(),
-	  	useMarkdown:     true
+	  	subReady
 	  }
   },
-  App
+  NoteDetailsPage
 )
