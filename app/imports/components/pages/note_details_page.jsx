@@ -1,55 +1,50 @@
-//REFACTOR: this should get the id param and pass into the note details container
-
 import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
 import { ClickToEdit } from '../forms/click_to_edit'
+import { AutoSaveInput } from '../forms/auto_save_input'
+import { ContentBlock } from '../content/content_block'
 import { IconBtn } from '../buttons/icon_btn'
-// import { NoteTitleContainer } from '../containers/note_title_container'
+import { LoadingWrapper } from '../utility/loading_wrapper'
 
 export const NoteDetailsPage = props => {
 
 	const
     backBtn = <IconBtn icon="arrow_back" handleClick={() => history.back()} />
+  ,  
+    noteTitleValue = props.subReady? props.note.title : ""
   ,
-    pageTitle = <PageTitle title={props.subReady? props.note.title : ""} />
+    noteContentValue = props.subReady? props.note.content : ""
   ,
-	  editablePageTitle = <ClickToEdit
+    pageTitle = <PageTitle title={noteTitleValue} />
+  ,
+    pageContent = <ContentBlock contentValue={noteContentValue} useMarkdown={true} emptyMsg={"Empty Note :-/"} />
+  ,
+    editableNoteTitle = <ClickToEdit
       component={pageTitle}
       field={"title"}
-      contentValue={props.subReady? props.note.title : ""}
+      contentValue={noteTitleValue}
       handleUpdates={props.handleUpdateNote}
       {...props}
-	 />
-  // ,
-  //   displayEditableComponent = <LoadingWrapper subsReady={props.subsReady} component={editableComponent} />
+    />
+  ,
+	  editableNoteContent = <ClickToEdit
+      component={pageContent}
+      field={"content"}
+      contentValue={noteContentValue}
+      handleUpdates={props.handleUpdateNote}
+      multiline={true}
+      {...props}
+	  />
 
-  // if (props.subsReady){
 
-  	// const
-  	//   noteTitleComponent = <PageTitle title={props.note.title} />
-    // ,
-	    // noteContentComponent = <ContentBlock contentValue={props.note.content} emptyMsg={"Empty Note"} {...props} />
-
-	 //  return <div id="app-container">
-  //            <AppHeader leftCol={backBtn} middleCol={displayEditableComponent(noteTitleComponent, props.note.title, "title", false)} />
-  //              <div id="main-content">
-  //                {displayEditableComponent(noteContentComponent, props.note.content, "content", true)}
-  //            </div>
-  //          </div>
-
-  // } else {
-    
-     return <div id="app-container">
-              <AppHeader 
-                leftCol={backBtn}
-                middleCol={editablePageTitle}
-              />
-              <div id="main-content">
-               {"Note details"}
-              </div>
-            </div>
-  // }
+  return <div id="app-container">
+          <AppHeader 
+            leftCol={backBtn}
+            middleCol={props.subReady? editableNoteTitle : null}
+          />
+          <div id="main-content">
+           {editableNoteContent}
+          </div>
+        </div>
 }
-
- // middleCol={displayEditableComponent(noteTitleComponent, props.note.title, "title", false)} 
