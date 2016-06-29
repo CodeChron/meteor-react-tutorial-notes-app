@@ -44,7 +44,7 @@ export const NoteDetailsPage = props => {
             middleCol={props.subReady? editableNoteTitle : null}
           />
           <div id="main-content">
-           {editableNoteContent}
+            <LoadingWrapper component={editableNoteContent} subReady={props.subReady} />
           </div>
         </div>
 }
