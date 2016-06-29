@@ -3,7 +3,7 @@ import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
 import { ContentBlock } from '../content/content_block'
 import { ClickToEdit } from '../forms/click_to_edit'
-import { LoadingFeedback } from '../utility/loading_feedback'
+import { LoadingFeedback } from '../utility/loading'
 import { IconBtn } from '../buttons/icon_btn'
 
 export const NoteDetailsPage = props => {
@@ -39,7 +39,7 @@ export const NoteDetailsPage = props => {
     
      return <div id="app-container">
               <div id="main-content">
-               <LoadingFeedback />
+               <Loading />
               </div>
             </div>
   }

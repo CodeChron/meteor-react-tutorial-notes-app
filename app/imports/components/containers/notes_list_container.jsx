@@ -1,11 +1,16 @@
-//This is a container or "data wrapper" around our list component, in which we manage Notes list data. This allows the list to be a "dumb" (and more reusable) recipient of data, and also allows us to use this container to render the same data in a different component (maybe a grid view?) 
+import React from 'react'
+
+//This is a container or "data wrapper" around our list component, in which we manage Notes list data. This is where we connect Meteor's real-time reactive data sources with our React components. To use it, we need to install both a Meteor package: 'react-meteor-data', and an npm package: 'react-addons-pure-render-mixin'
+//This allows the list to be a "dumb" (and more reusable) recipient of data, and also allows us to use this container to render the same data in a different component (maybe a grid view?) 
 import { createContainer } from 'meteor/react-meteor-data'
+
+//Here, we are importing our MongoDb collection and a data schema.  Head over there to check that out and then come back here: /imports/collections/note.js and then come back here. (Yes, I know you are already inside another return loop to the routes page -  Inception anyone? https://www.youtube.com/watch?v=7yshUmxuEjE)
 import { Note } from '../../collections/notes'
+
+//Here, we are importing components we will be using inside the container.
 import { SingleFieldSubmit }  from '../forms/single_field_submit'
 import { List }  from '../lists/list'
 import { LoadingWrapper }  from '../utility/loading_wrapper'
-
-
 
 export const NotesListContainer = createContainer(props => {
 		
@@ -41,11 +46,7 @@ export const NotesListContainer = createContainer(props => {
 
 		//This is where we return, or make available data to child components. The single token object syntax (eg 'notes') is a feature of ES6, and is shorthand for 'token:token' eg 'notes:notes'  
 	  return {
-	  	handleDeleteNote,
-      linkItem:          true,
-      deleteItem:        true,
-      addItem:           true,
-      component:         <List collection={notes} addItem={addItem} deleteItem={deleteItem} handleDelete={handleDelete} />,
+      component: <List collection={notes} />,
       subReady
 
 	  }
@@ -53,3 +54,7 @@ export const NotesListContainer = createContainer(props => {
   //We are wrapping this container around a "loading wrapper" which will display a loading animation until data is ready to be displayed, and will then display the list component
   LoadingWrapper
 )
+
+//NEXT: return to the routes file.
+
+// linkItem={true} addItem={addItem} deleteItem={true} handleDelete={handleDelete}

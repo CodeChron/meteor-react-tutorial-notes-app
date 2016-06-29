@@ -5,13 +5,11 @@ import { DeleteBtn }  from '../buttons/delete_btn'
 //This is a somewhat more advanced but still 'stateless' component
 export const List = props => {
 
-
   //Here is an example of having a collection of optional component features
   //Each feature can be turned on by setting its prop to true (see 'List.propTypes' below.)
   //Doing so, will call the function corresponding to the feature name, pass in any props needed, and return the corresponding content block.
 	const listFeatures = {
   	itemTitle: item => <span className="flex-main-content">{item.title}</span>,
-  	addItem: args => <li><SingleFieldSubmit {...args} /></li>,
   	linkItem: (item, linkRoute) => <a href={FlowRouter.path(linkRoute , { _id: item._id })} className="flex-main-content">{item.title}</a>,
   	deleteItem: (item, handleDelete) => <DeleteBtn handleDelete={handleDelete} size={"btn-small"} itemToDelete={item} />
 	}
@@ -24,7 +22,7 @@ export const List = props => {
     	</li>)
 
   return <ul className="list">
-      	  {props.addItem? listFeatures.addItem(props) : null }
+      	  {props.addItem? props.addItem : null }
           {displayList}
          </ul>
 }
@@ -32,7 +30,7 @@ export const List = props => {
 //This is where we set the props which this component supports.  One can think of this as a mini api for this component.  A developer can quickly look at this and see how to interface with the compoenent.
 List.propTypes = {
 	collection:   React.PropTypes.array.isRequired,
-	addItem:      React.PropTypes.bool,
+	addItem:      React.PropTypes.object,
 	linkItem:     React.PropTypes.bool,
 	deleteItem:   React.PropTypes.bool,
   linkRoute:    React.PropTypes.string
@@ -40,7 +38,7 @@ List.propTypes = {
 
 //This is where we set default values for props.  Props for which a default value is not set will default to null.  However, for any props that are not required you shuold set a default value.
 List.defaultProps = {
-	addItem:      false,
+	addItem:      null,
 	linkItem:     false,
 	linkRoute:    null,
 	deleteItem:   false
