@@ -3,6 +3,7 @@
 import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
+import { ClickToEdit } from '../forms/click_to_edit'
 import { IconBtn } from '../buttons/icon_btn'
 // import { NoteTitleContainer } from '../containers/note_title_container'
 
@@ -12,15 +13,14 @@ export const NoteDetailsPage = props => {
     backBtn = <IconBtn icon="arrow_back" handleClick={() => history.back()} />
   ,
     pageTitle = <PageTitle title={props.subReady? props.note.title : ""} />
-  // ,
-	 //  editableComponent = (clickableComponent, contentValue, field, multiline) => <ClickToEdit
-	 //      clickableComponent={clickableComponent}
-	 //      field={field}
-	 //      contentValue={contentValue}
-	 //      handleUpdates={props.handleUpdateNote}
-	 //      multiline={multiline}
-	 //      {...props}
-	 //    />
+  ,
+	  editablePageTitle = <ClickToEdit
+      component={pageTitle}
+      field={"title"}
+      contentValue={props.subReady? props.note.title : ""}
+      handleUpdates={props.handleUpdateNote}
+      {...props}
+	 />
   // ,
   //   displayEditableComponent = <LoadingWrapper subsReady={props.subsReady} component={editableComponent} />
 
@@ -43,7 +43,7 @@ export const NoteDetailsPage = props => {
      return <div id="app-container">
               <AppHeader 
                 leftCol={backBtn}
-                middleCol={pageTitle}
+                middleCol={editablePageTitle}
               />
               <div id="main-content">
                {"Note details"}
