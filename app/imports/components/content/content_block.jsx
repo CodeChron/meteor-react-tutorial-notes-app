@@ -29,14 +29,3 @@ ContentBlock.defaultProps = {
 	useMarkdown:    false,
   emptyMsg:       "Empty item."
 }
-
-   // }
-    // ,
-   //  handleEmptyContent = (contentValue, emptyMsg) => {
-     //  return contentValue === ""?
-   //      <div className="centered gray-pill help-text">{emptyMsg}</div>
-     //  :
-     //    <div>{() => }</div>
-    // },
-    
-// <div className="centered gray-pill help-text">Empty Note</div>
