@@ -4,9 +4,15 @@
 
 This is a simple app that can be a great starting point for a beginner programmer who wants to take their JS knowledge to the next level.
 
-Just [clone the repo](https://help.github.com/articles/cloning-a-repository/), and follow the comments in the code. Start at [/app/client/main.js](https://github.com/CodeChron/meteor-react-tutorial-notes-app/blob/master/app/client/main.js)
+Just [clone the repo](https://help.github.com/articles/cloning-a-repository/), and follow the comments in the code. Start at [/app/client/main.js](https://github.com/CodeChron/meteor-react-tutorial-notes-app/blob/master/app/client/main.js).  I recommend trying to build your own version of the app while reviewing the code and the comments.
 
-I recommend trying to build your own version of the app while reviewing the code and the comments.
+
+## Run the app
+1. Make sure you have [Meteor installed](https://www.meteor.com/install).
+2. Cd into the ``app`` directory.
+2. Install npm packages: ```meteor npm install```
+3. Run the app: ```meteor```
+4. View the app in your browser at ```http://localhost:3000```
 
 ## Some topics covered
 - Eager vs Lazy Loading
