@@ -39,10 +39,6 @@ export class AutoSaveInput extends React.Component {
     this.props.doneEditing? this.props.doneEditing() : null
   }
 
-  // handleDoneEditing(){
-  //   this.props.doneEditing()
-  // }
-
   displayEditor(multiLineEditor){
     return multiLineEditor?
       <form onSubmit={this.handleSubmit.bind(this)} className="c-content-editor flex-main-content flex-column">
