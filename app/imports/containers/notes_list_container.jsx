@@ -4,18 +4,18 @@ import React from 'react'
 //This allows the list to be a "dumb" (and more reusable) recipient of data, and also allows us to use this container to render the same data in a different component (maybe a grid view?) 
 import { createContainer } from 'meteor/react-meteor-data'
 
-//Here, we are importing our MongoDb collection and a data schema.  Head over there to check that out and then come back here: /imports/collections/note.js and then come back here. (Yes, I know you are already inside another return loop to the routes page -  Inception anyone? https://www.youtube.com/watch?v=7yshUmxuEjE)
-import { Note } from '../../collections/notes'
+//Here, we are importing our MongoDb collection and a data schema.  Head over there to check that out and then come back here: /imports/collections/note.js and then come back here. 
+import { Note } from '/imports/collections/notes'
 
 //Here, we are importing components we will be using inside the container.
-import { SingleFieldSubmit }  from '../forms/single_field_submit'
-import { List }  from '../lists/list'
-import { LoadingWrapper }  from '../utility/loading_wrapper'
+import { SingleFieldSubmit }  from '/imports/components/forms/single_field_submit'
+import { List }  from '/imports/components/lists/list'
+import { LoadingWrapper }  from '/imports/components/utility/loading_wrapper'
 
 export const NotesListContainer = createContainer(props => {
 		
 		const
-			//Here, we are creating a subcription to the 'notes.list' publication.  See /imports/collections/server/publications.js - the 'server' directory is significant. It is one of Meteor's special directories, and by calling it that we ensure that the code inside that directory will only run on the server.
+			//Here, we are creating a subcription to the 'notes.list' publication.  See /imports/collections/server/publications.js - the 'server' directory is significant. It is one of Meteor's special directories, and by naming that way we ensure that code inside that directory will only run on the server.
 			sub = Meteor.subscribe('notes.list')
 		,
 		  //Here we are defining a boolean for checking if our subscription is ready (ie we have connected to the server publication and are receiving our real-time subscription stream)
@@ -44,17 +44,16 @@ export const NotesListContainer = createContainer(props => {
       //Here we are defining a component for an optional list feature - adding items, which we will then pass into the list component below
       addItem = <SingleFieldSubmit handleSubmit={handleCreate} placeholder={"New Note..."} />
 
-		//This is where we return, or make available data to child components. The single token object syntax (eg 'notes') is a feature of ES6, and is shorthand for 'token:token' eg 'notes:notes'  
+		//This is where we return, or make available data to child components. In this case, we are returning a list component with all the props set.
+		//The single token object syntax (eg 'subReady') is a feature of ES6, and is shorthand for 'token:token' eg 'subReady:subReady'  
 	  return {
       component: <List collection={notes} addItem={addItem} linkRoute={"noteDetails"} deleteItem={true} linkItem={true} handleDelete={handleDelete} />,
       subReady
 
 	  }
   },
-  //We are wrapping this container around a "loading wrapper" which will display a loading animation until data is ready to be displayed, and will then display the list component
+  //We are wrapping this container around a "loading wrapper" which will display a loading animation until data is ready to be displayed, and will then display the component we are returning.
   LoadingWrapper
 )
 
-//NEXT: return to the routes file.
-
-// linkItem={true} addItem={addItem} deleteItem={true} handleDelete={handleDelete}
+//NEXT: Header over to the /imports/components/utility/loading_wrapper.jsx

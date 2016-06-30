@@ -10,6 +10,11 @@ export class AutoSaveInput extends React.Component {
     }
   }
 
+  handleSubmit(e) {
+    e.preventDefault()
+    this.props.doneEditing()
+  }
+
   handleUpdates(updatedValue){
 
     const
@@ -34,9 +39,13 @@ export class AutoSaveInput extends React.Component {
     this.props.doneEditing? this.props.doneEditing() : null
   }
 
+  // handleDoneEditing(){
+  //   this.props.doneEditing()
+  // }
+
   displayEditor(multiLineEditor){
     return multiLineEditor?
-      <form className="c-content-editor flex-main-content flex-column">
+      <form onSubmit={this.handleSubmit.bind(this)} className="c-content-editor flex-main-content flex-column">
             <textarea
               placeholder={this.props.placeholder}
               value={this.state.contentValue}
@@ -52,7 +61,7 @@ export class AutoSaveInput extends React.Component {
            </div>
         </form>
     :
-      <form className="c-single-field-submit">
+      <form onSubmit={this.handleSubmit.bind(this)} className="c-single-field-submit">
         <input
           type="text"
           placeholder={this.props.placeholder}
@@ -65,7 +74,7 @@ export class AutoSaveInput extends React.Component {
   }
 
   render() {
-    return  this.displayEditor(this.props.multiline)
+    return this.displayEditor(this.props.multiline)
   }
 }
 

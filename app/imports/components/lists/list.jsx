@@ -6,7 +6,7 @@ import { DeleteBtn }  from '../buttons/delete_btn'
 export const List = props => {
 
   //Here is an example of having a collection of optional component features
-  //Each feature can be turned on by setting its prop to true (see 'List.propTypes' below.)
+  //Each feature can be turned on by setting its prop to true (see 'List.propTypes' below.)  We are "turning on" these features in the NotesListContainer.
   //Doing so, will call the function corresponding to the feature name, pass in any props needed, and return the corresponding content block.
 	const listFeatures = {
   	itemTitle: item => <span className="flex-main-content">{item.title}</span>,
@@ -44,4 +44,4 @@ List.defaultProps = {
 	deleteItem:   false
 }
 
-//NEXT: head over to the SingleFieldSubmit component - you should be able to find it by looking at the import statement on top.
+//NEXT: head over to /imports/components/forms/single_field_submit.jsx

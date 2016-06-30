@@ -2,17 +2,15 @@
 //To import Meteor packages, we need to use the 'pseudo-global' prefix 'meteor/'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 
-//Here we are importing an npm package.  For those, there is no need for a prefix.
-//The lack of curly braces tells us we are importing the default module exported from the 'react' package.
+//Here we are importing an npm package.  For those, there is no need for a prefix. The lack of curly braces tells us we are importing the default module exported from the 'react' package.
 import React from 'react'
 import { mount } from 'react-mounter'
 
-//Here we are importing 'modules' exported from other files. It may seem like a lot of work to have to import everything, but the benefits are significant. A HUGE advantage is that anyone can now look at a file and trace the source of any function, objects, etc., which is great both for debugging and for people who are new to a project.
-// import { App } from '/imports/components/containers/app_container'
-// import HomepageContainer from '/imports/components/containers/homepage_container'
-import { NoteDetailsContainer } from '/imports/components/containers/note_details_container'
+//Here we are importing 'modules' exported from other files. It may seem like a lot of work to have to import everything, but the benefits are significant. A HUGE advantage is that anyone can now look at a file and trace the source of any function, object, etc., which is great both for debugging and for people who are new to a project.
+import { NoteDetailsContainer } from '/imports/containers/note_details_container'
 import { Homepage } from '/imports/components/pages/homepage'
 
+//Here we are defining a top-level 'layout' - the only reason this is created is because we need to accomodate the structure imposed by FlowRouter, which is one targeted more towards a template-based paradigm (ie one where you have static layouts with dynamic regions) rather than a component-based paradigm, which is what we are using in the form of React, in which you have a single top-down hierarchy.  Therefore we create this minimal layout, in which props (or params) simply pass through it and nothing else.
 const App = props => props.page(props)
 
 //Here we are defining the 'root' route, or the default view of the app.
@@ -20,13 +18,13 @@ FlowRouter.route('/', {
   name: 'homepage',
   action() {
 
-    //Inside the action() method, we tell FlowRouter what it should do when users access this route.  Because we are using React, we need to use the 'mount' method (imported above from 'react-mounter') to render React components.  The mount methods takes two parameters: a 'layout' and a collection of 'regions'  Unfortunately, that model is one more suited for template-based rendering, such as Blaze, where you tend to have a fixed global wrapper and then you have regions which 'yield' to view-specific content. With React's component-based model, we want to have a single top-down hierarchy, so we need to coax FlowRouter into this model.  We do this by first replacing the 'layout' with a top-level data container.  In turn the data container does not dictate layout at all, but just passes data down to the homepage component, which effectively is the top-level container.
-    //NEXT: Check out the data container at /imports/components/containers/homepage_container.js and then return here. 
-
+    //Inside the action() method, we tell FlowRouter what it should do when users access this route.  Because we are using React, we need to use the 'mount' method (imported above from 'react-mounter') to render React components.  The mount methods takes two parameters: a 'layout' and a collection of 'regions'.  For our 'layout' we are using the "pass-through" App we just created above.
     mount(App, {
-      // As we saw in the container file, it return parameters and reactive data. Those values are passed down, in the form of a 'props' object, 'through' the App component into the region below. Then, we pass in that object as an argument when 'page(props)' gets called. (See the App component) In turn, that object gets passed into the homepage component using {...props} which effectively passes along all props that are passed to it into the component.  It is the '...' part that does the magic here. To learn more, read about ES6 spread operators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
-      //The above <Homepage ... /> part might look funny. This is JSX syntax and allows us to write HTML-like syntax.  The react package we imported translates this into plain JavaScript.
+
+      //Here we are defining the region and its associated content for this route.  We are naming the region 'page' since we want everything to be enclosed in a single component. The component that is being rendered is the "Homepage" component.  The 'props => ' arrow function allows us to pass in attributes from a parent into this component. Notice the use of "...props" which effectively passes along all props that are passed to it into the component.  It is the '...' part that does the magic here. To learn more, read about ES6 spread operators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+    
       page: props => <Homepage {...props} />
+      //The above <Homepage ... /> part might look funny. This is JSX syntax and allows us to write HTML-like syntax.  The react package we imported translates this into JavaScript.
     })
 
     //NEXT: head over to the homepage component: /imports/components/pages/homepage.jsx

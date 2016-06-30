@@ -1,8 +1,8 @@
 import { createContainer } from 'meteor/react-meteor-data'
 import { FlowRouter } from 'meteor/kadira:flow-router'
 import { Meteor } from 'meteor/meteor'
-import { Note } from '../../collections/notes'
-import { NoteDetailsPage } from '../pages/note_details_page'
+import { Note } from '/imports/collections/notes'
+import { NoteDetailsPage } from '../components/pages/note_details_page'
 
 export const NoteDetailsContainer = createContainer(() => {
 		

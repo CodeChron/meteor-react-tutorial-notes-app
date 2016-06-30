@@ -1,6 +1,6 @@
 import React from 'react'
 
-//This is an example of an actual React Component, in that we are extending the Component class of React
+//This is an example of an actual React Component, in that we are extending the Component method of React
 export class SingleFieldSubmit extends React.Component {
 
   //This is where we instantiate the component and can set any default values.  Additionally we are passing in props from the parent component via constructor(props) and then passing those props into the Component itself using super(props)
@@ -15,7 +15,7 @@ export class SingleFieldSubmit extends React.Component {
   }
 
   //When called, this function passes in the 'e' DOM event object and gets the value that was entered via target.value and then updates inputValue state with that value.
-  //In React, changing a field value is considered a change in state.  
+  //In React, changing a field value is considered a change in component state.  
   updateInputValue(e){
     this.setState({inputValue: e.target.value})
   }
@@ -48,4 +48,4 @@ SingleFieldSubmit.defaultProps = {
   placeholder:   "New..."
 }
 
-//YOUR TURN: This is as far as a I got with the inline comments. Keep checking out the code and then try building your own app. Questions,comments, feeedback?  Ping me at @codechron
+//YOUR TURN: This is as far as a I got with the inline comments. Keep checking out the code and then try building your own app. Questions,comments, feedback?  Ping me at @codechron
