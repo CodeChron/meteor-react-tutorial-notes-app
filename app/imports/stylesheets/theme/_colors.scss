@@ -14,6 +14,9 @@ body {
 body {
   color: $primary-text-color;
 }
+.help-text {
+  color: $secondary-text-color;
+}
 
 
 // *******  LINKS  *******
@@ -69,6 +72,15 @@ a {
 }
 
 
+
+
+// *******  BACKGROUNDS/PILLS  *******
+
+.gray-pill {
+  border-radius: .25em;
+  background-color: $primary-color-light;
+  padding: .5em;
+}
 
 // *******  BORDERS/DIVIDERS  *******
 

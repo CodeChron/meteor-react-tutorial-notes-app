@@ -22,7 +22,7 @@ export const NoteDetailsPage = props => {
   ,
     pageTitle = <PageTitle title={noteTitleValue} />
   ,
-    pageContent = <ContentBlock contentValue={noteContentValue} useMarkdown={true} emptyMsg={"Empty Note :-/"} />
+    pageContent = <ContentBlock contentValue={noteContentValue} useMarkdown={true} emptyMsg={"Empty Note (click to add content.)"} />
   ,
     editableNoteTitle = <ClickToEdit
       component={pageTitle}

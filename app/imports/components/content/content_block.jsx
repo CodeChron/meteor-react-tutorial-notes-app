@@ -3,18 +3,20 @@ import ReactMarkdown from 'react-markdown'
 
 export const ContentBlock = props => {
 
-	const handleEmptyContent = (contentValue, emptyMsg) => {
-		return contentValue === ""?
-		  emptyMsg
-		 :
-		 contentValue
-	},
-  displayContent = handleEmptyContent(props.contentValue, props.emptyMsg)
+	const
+    emptyMsg = <div className="helper-centered gray-pill help-text">{props.emptyMsg}</div>
+  ,
+    handleMarkDown = (useMarkdown, content) => 
+      useMarkdown?
+        <div><ReactMarkdown source={content} /></div>
+      :
+        <div>{content}</div>   
+ 
+  return props.contentValue === ""?
+    emptyMsg
+  :
+    handleMarkDown(props.useMarkdown, props.contentValue)
 
-  return props.useMarkdown?
-    <div><ReactMarkdown source={displayContent} /></div>
-   :
-    <div>{displayContent}</div>   
 }
 
 ContentBlock.propTypes = { 
@@ -28,3 +30,13 @@ ContentBlock.defaultProps = {
   emptyMsg:       "Empty item."
 }
 
+   // }
+    // ,
+   //  handleEmptyContent = (contentValue, emptyMsg) => {
+     //  return contentValue === ""?
+   //      <div className="centered gray-pill help-text">{emptyMsg}</div>
+     //  :
+     //    <div>{() => }</div>
+    // },
+    
+// <div className="centered gray-pill help-text">Empty Note</div>
