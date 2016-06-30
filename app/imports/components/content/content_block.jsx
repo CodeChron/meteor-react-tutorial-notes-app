@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 export const ContentBlock = props => {
 
 	const
-    emptyMsg = <div className="helper-centered gray-pill help-text">{props.emptyMsg}</div>
+    emptyMsg = <div className="helper-centered clickable-pill help-text">{props.emptyMsg}</div>
   ,
     handleMarkDown = (useMarkdown, content) => 
       useMarkdown?
