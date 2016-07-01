@@ -13,7 +13,7 @@ export const Homepage = props => {
   //Here we are passing in the <PageTitle /> component into the AppHeader.  Below that, we are rendering the <NotesListContainer />
   //NEXT: Head over to the /imports/containers/notes_list_container.jsx
   return <div id="app-container">
-           <AppHeader middleCol={pageTitle} />
+           <AppHeader middleCol={pageTitle} rightCol={props.loginButtons} />
            <div id="main-content">
              <NotesListContainer {...props} />
            </div>

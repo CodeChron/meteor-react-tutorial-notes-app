@@ -45,6 +45,7 @@ export const NoteDetailsPage = props => {
           <AppHeader 
             leftCol={backBtn}
             middleCol={props.subReady? editableNoteTitle : null}
+            rightCol={props.loginButtons}
           />
           <div id="main-content">
             <LoadingWrapper component={editableNoteContent} subReady={props.subReady} />
