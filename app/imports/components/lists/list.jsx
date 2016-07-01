@@ -33,12 +33,10 @@ export const List = props => {
 //This is where we set the props which this component supports.  One can think of this as a mini api for this component.  A developer can quickly look at this and see how to interface with the compoenent.
 List.propTypes = {
 	collection:   React.PropTypes.array.isRequired,
-  itemCount: React.PropTypes.number,
 	addItem:      React.PropTypes.object,
 	linkItem:     React.PropTypes.bool,
 	deleteItem:   React.PropTypes.bool,
-  linkRoute:    React.PropTypes.string,
-  emptyListMsg: React.PropTypes.string
+  linkRoute:    React.PropTypes.string
 }
 
 //This is where we set default values for props.  Props for which a default value is not set will default to null.  However, for any props that are not required you shuold set a default value.
@@ -46,8 +44,7 @@ List.defaultProps = {
 	addItem:      null,
 	linkItem:     false,
 	linkRoute:    null,
-	deleteItem:   false,
-  emptyListMsg: "No items"
+	deleteItem:   false
 }
 
 //NEXT: head over to /imports/components/forms/single_field_submit.jsx
