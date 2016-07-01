@@ -22,3 +22,5 @@ kadira:flow-router
 jagi:astronomy
 react-meteor-data
 msavin:mongol
+accounts-password
+accounts-ui
