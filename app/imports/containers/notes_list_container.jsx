@@ -1,7 +1,4 @@
-import React from 'react'
-
-//This is a container or "data wrapper" around our list component, in which we manage Notes list data. This is where we connect Meteor's real-time reactive data sources with our React components. To use it, we need to install both a Meteor package: 'react-meteor-data', and an npm package: 'react-addons-pure-render-mixin'
-//This allows the list to be a "dumb" (and more reusable) recipient of data, and also allows us to use this container to render the same data in a different component (maybe a grid view?) 
+import React from 'react' 
 import { createContainer } from 'meteor/react-meteor-data'
 
 //Here, we are importing our MongoDb collection and a data schema.  Head over there to check that out and then come back here: /imports/collections/note.js and then come back here. 
@@ -41,7 +38,7 @@ export const NotesListContainer = createContainer(props => {
         })
 		  }
 		, 
-      //Here we are defining a component for an optional list feature - adding items, which we will then pass into the list component below
+      //Here we are setting props to be used in the List component below depending on if a user is signed in or not, ie if currentUser is truthy or not.
       addItem = props.currentUser? <SingleFieldSubmit handleSubmit={handleCreate} placeholder={"New Note..."} /> : null
     ,
       deleteItem = props.currentUser? true : false

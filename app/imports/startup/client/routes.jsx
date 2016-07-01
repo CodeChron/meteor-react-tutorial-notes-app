@@ -7,12 +7,11 @@ import React from 'react'
 import { mount } from 'react-mounter'
 
 //Here we are importing 'modules' exported from other files. It may seem like a lot of work to have to import everything, but the benefits are significant. A HUGE advantage is that anyone can now look at a file and trace the source of any function, object, etc., which is great both for debugging and for people who are new to a project.
+
+//Here are are importing a reactive data container.  Head over to /imports/containers/app_container.jsx to learn more
 import { AppContainer } from '/imports/containers/app_container'
 import { NoteDetailsContainer } from '/imports/containers/note_details_container'
 import { Homepage } from '/imports/components/pages/homepage'
-
-//Here we are defining a top-level 'layout' - the only reason this is created is because we need to accomodate the structure imposed by FlowRouter, which is one targeted more towards a template-based paradigm (ie one where you have static layouts with dynamic regions) rather than a component-based paradigm, which is what we are using in the form of React, in which you have a single top-down hierarchy.  Therefore we create this minimal layout, in which props (or params) simply pass through it and nothing else.
-// const App = props => props.page(props)
 
 //Here we are defining the 'root' route, or the default view of the app.
 FlowRouter.route('/', {
