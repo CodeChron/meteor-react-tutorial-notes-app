@@ -7,7 +7,7 @@ import { NotesListContainer }  from '/imports/containers/notes_list_container'
 export const Homepage = props => {
 
   //Here we are instantiating a PageTitle component and passing in a value for the 'title' prop.  I recommend heading over to /content/page_title to see how this corresponds to the component itself.
-	const pageTitle = <PageTitle title={"My Notes App"} />
+	const pageTitle = <PageTitle title={"A Notes App"} />
 
   //This what this component actually renders (or 'returns') in the UI
   //Here we are passing in the <PageTitle /> component into the AppHeader.  Below that, we are rendering the <NotesListContainer />
