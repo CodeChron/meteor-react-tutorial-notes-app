@@ -40,14 +40,17 @@ export const NotesListContainer = createContainer(props => {
           }
         })
 		  }
-    ,
+		, 
       //Here we are defining a component for an optional list feature - adding items, which we will then pass into the list component below
-      addItem = <SingleFieldSubmit handleSubmit={handleCreate} placeholder={"New Note..."} />
+      addItem = props.currentUser? <SingleFieldSubmit handleSubmit={handleCreate} placeholder={"New Note..."} /> : null
+    ,
+      deleteItem = props.currentUser? true : false
+
 
 		//This is where we return, or make available data to child components. In this case, we are returning a list component with all the props set.
 		//The single token object syntax (eg 'subReady') is a feature of ES6, and is shorthand for 'token:token' eg 'subReady:subReady'  
 	  return {
-      component: <List collection={notes} addItem={addItem} linkRoute={"noteDetails"} deleteItem={true} linkItem={true} handleDelete={handleDelete} />,
+      component: <List collection={notes} addItem={addItem} linkRoute={"noteDetails"} deleteItem={deleteItem} linkItem={true} handleDelete={handleDelete} />,
       subReady
 
 	  }
