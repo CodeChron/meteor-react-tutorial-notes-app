@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Blaze } from 'meteor/blaze'
 
+//Here we are using Meteor's out-of-the box login ui.  As it happens, this ui is created using Blaze, so this is an example of how to integrate that with React.
 export class LoginButtons extends React.Component{
   
   constructor(props) {

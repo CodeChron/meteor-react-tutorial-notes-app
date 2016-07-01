@@ -7,11 +7,12 @@ import React from 'react'
 import { mount } from 'react-mounter'
 
 //Here we are importing 'modules' exported from other files. It may seem like a lot of work to have to import everything, but the benefits are significant. A HUGE advantage is that anyone can now look at a file and trace the source of any function, object, etc., which is great both for debugging and for people who are new to a project.
+import { AppContainer } from '/imports/containers/app_container'
 import { NoteDetailsContainer } from '/imports/containers/note_details_container'
 import { Homepage } from '/imports/components/pages/homepage'
 
 //Here we are defining a top-level 'layout' - the only reason this is created is because we need to accomodate the structure imposed by FlowRouter, which is one targeted more towards a template-based paradigm (ie one where you have static layouts with dynamic regions) rather than a component-based paradigm, which is what we are using in the form of React, in which you have a single top-down hierarchy.  Therefore we create this minimal layout, in which props (or params) simply pass through it and nothing else.
-const App = props => props.page(props)
+// const App = props => props.page(props)
 
 //Here we are defining the 'root' route, or the default view of the app.
 FlowRouter.route('/', {
@@ -19,7 +20,7 @@ FlowRouter.route('/', {
   action() {
 
     //Inside the action() method, we tell FlowRouter what it should do when users access this route.  Because we are using React, we need to use the 'mount' method (imported above from 'react-mounter') to render React components.  The mount methods takes two parameters: a 'layout' and a collection of 'regions'.  For our 'layout' we are using the "pass-through" App we just created above.
-    mount(App, {
+    mount(AppContainer, {
 
       //Here we are defining the region and its associated content for this route.  We are naming the region 'page' since we want everything to be enclosed in a single component. The component that is being rendered is the "Homepage" component.  The 'props => ' arrow function allows us to pass in attributes from a parent into this component. Notice the use of "...props" which effectively passes along all props that are passed to it into the component.  It is the '...' part that does the magic here. To learn more, read about ES6 spread operators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
     
@@ -34,7 +35,7 @@ FlowRouter.route('/', {
 FlowRouter.route('/notes/:_id', {
   name: 'noteDetails',
   action() {
-    mount(App, {
+    mount(AppContainer, {
       page: () => <NoteDetailsContainer />
     })
   }
