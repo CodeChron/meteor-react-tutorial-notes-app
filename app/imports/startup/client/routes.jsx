@@ -36,7 +36,7 @@ FlowRouter.route('/notes/:_id', {
   name: 'noteDetails',
   action() {
     mount(AppContainer, {
-      page: () => <NoteDetailsContainer />
+      page: props => <NoteDetailsContainer {...props} />
     })
   }
 })
