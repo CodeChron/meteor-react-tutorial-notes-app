@@ -43,7 +43,7 @@ export const NotesListContainer = createContainer(props => {
 		  }
 		, 
       //Here we are setting props to be used in the List component below depending on if a user is signed in or not, ie if currentUser is truthy or not.
-      addItemPlaceholder = props.currentUser? "Type something and hit return to add a note..." : "New Note..."
+      addItemPlaceholder = notesCount === 0? "Type something and hit return to add a note..." : "New Note..."
     , addItem = props.currentUser? <SingleFieldSubmit handleSubmit={handleCreate} placeholder={addItemPlaceholder} /> : null
     , deleteItem = props.currentUser? true : false
 
