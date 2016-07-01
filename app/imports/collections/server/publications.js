@@ -14,6 +14,10 @@ const
 
 //Here, we are using the same naming convention as with Meteor.methods.  See /imports/collections/notes.js
 Meteor.publish('notes.list', function() {
+
+  //Here we are using the 'tmeasday:publish-counts' package to reactively get the number of notes published.  This allows us to display a message if there are no notes.
+  Counts.publish(this, 'note_count', Note.find(), { noReady: true })
+  
   //By including a 'field' parameter in our query, the data that is published will include only the fields listed.  Without it, all fields would be published, which is basically a security risk.
   return Note.find({}, { fields: notesListFields })
 })

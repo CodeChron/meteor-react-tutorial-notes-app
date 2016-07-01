@@ -15,25 +15,30 @@ export const List = props => {
 	}
   
   //This is where we generate our list, using the map() method, which returns an array that will be assigned to 'displayList'  Here, we are using the ternary operator to check if a given optional feature, eg 'linkItem' has been turned on.  See the top-level container component, in which turn these features on by returning true for the corresponding props.
-  const displayList = props.collection.map((item) => 
+  const
+    displayList = props.collection.map((item) => 
     	<li key={item._id} className="flex-vertical-middle">
     	  {props.linkItem? listFeatures.linkItem(item, props.linkRoute) : listFeatures.itemTitle(item)}
 	 	    {props.deleteItem? listFeatures.deleteBtn(item, props.handleDelete) : null }
     	</li>)
 
-  return <ul className="list">
-      	  {props.addItem? props.addItem : null }
-          {displayList}
-         </ul>
+    return <ul className="list">
+        {props.displayEmptyListMsg()}
+        {props.addItem? props.addItem : null }
+        {displayList}
+      </ul>
+
 }
 
 //This is where we set the props which this component supports.  One can think of this as a mini api for this component.  A developer can quickly look at this and see how to interface with the compoenent.
 List.propTypes = {
 	collection:   React.PropTypes.array.isRequired,
+  itemCount: React.PropTypes.number,
 	addItem:      React.PropTypes.object,
 	linkItem:     React.PropTypes.bool,
 	deleteItem:   React.PropTypes.bool,
-  linkRoute:    React.PropTypes.string
+  linkRoute:    React.PropTypes.string,
+  emptyListMsg: React.PropTypes.string
 }
 
 //This is where we set default values for props.  Props for which a default value is not set will default to null.  However, for any props that are not required you shuold set a default value.
@@ -41,7 +46,8 @@ List.defaultProps = {
 	addItem:      null,
 	linkItem:     false,
 	linkRoute:    null,
-	deleteItem:   false
+	deleteItem:   false,
+  emptyListMsg: "No items"
 }
 
 //NEXT: head over to /imports/components/forms/single_field_submit.jsx
