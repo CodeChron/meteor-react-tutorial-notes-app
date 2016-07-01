@@ -84,3 +84,11 @@ a {
 .color-top-divider {
   border-top: $divider-line;
 }
+
+
+// *******  VENDOR  *******
+#app-header #login-buttons {
+  .login-link-text {
+    color: $base-bg-color;
+  }
+}
