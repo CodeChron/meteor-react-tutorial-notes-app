@@ -1,6 +1,6 @@
 # A Basic Note-taking App Built with Meteor and React
 
-![side-by-side-550-px](https://cloud.githubusercontent.com/assets/819213/15934553/013d3d50-2e32-11e6-86ec-5cc5309468ee.jpg)
+![note app views](https://cloud.githubusercontent.com/assets/819213/16540828/f38cfbee-403f-11e6-993d-683a5da0a298.png)
 
 This is a simple app that can be a great starting point for a beginner programmer who wants to take their JS knowledge to the next level.
 
