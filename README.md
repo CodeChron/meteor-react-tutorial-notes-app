@@ -26,7 +26,7 @@ Just [clone the repo](https://help.github.com/articles/cloning-a-repository/), a
 and more...
 
 ### Getting caught up using git branches.
-1. Clone the reop
+1. Clone the repo
 2. Pull down all branches: ```git fetch --all```
 3. View available branches: ```git branch -a```
 4. Check out a specific branch: ```git checkout remotes/origin/[branchname]``` eg ```git checkout remotes/origin/01-setup```
