@@ -25,6 +25,11 @@ Just [clone the repo](https://help.github.com/articles/cloning-a-repository/), a
 
 and more...
 
+### Getting caught up using git branches.
+2. Pull down all branches: ```git fetch --all```
+3. View available branches: ```git branch -a```
+4. Check out a specific branch: ```git checkout origin/[branchname]``` eg ```git checkout origin/setup```
+
 
 ## Questions, Comments, Feedback?
 Leave a comment at the associated [blog post](http://coderchronicles.org/2016/06/10/build-a-simple-note-taking-app-with-meteor-and-react/) or [ping me](https://twitter.com/codechron) on Twitter.
