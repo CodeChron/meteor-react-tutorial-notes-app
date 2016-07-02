@@ -1,6 +1,7 @@
 import React from 'react'
 import { AppHeader } from '../layouts/app_header'
 import { PageTitle } from '../content/page_title'
+
 export const Homepage = props => {
 
 	const pageTitle = <PageTitle title={"A Notes App"} />
