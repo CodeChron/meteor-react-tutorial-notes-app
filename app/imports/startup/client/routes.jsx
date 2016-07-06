@@ -10,6 +10,5 @@ FlowRouter.route('/', {
     mount(AppContainer, {
       page: props => <Homepage {...props} />
     })
-
   }
 })
