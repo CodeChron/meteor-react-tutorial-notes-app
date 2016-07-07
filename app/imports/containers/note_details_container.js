@@ -14,7 +14,7 @@ export const NoteDetailsContainer = createContainer(props => {
       subReady = sub.ready()
     ,
 			note = subReady? Note.findOne({ _id: noteId }) : {}
-			,
+		,
 			handleUpdateNote = (collection, field, value) => {
 			  const doc = {}
 			  doc[field] = value
