@@ -9,39 +9,31 @@ import { LoadingWrapper }  from '/imports/components/utility/loading_wrapper'
 export const NotesListContainer = createContainer(props => {
 		
 		const
+      //DATA
 			sub = Meteor.subscribe('notes.list')
-		,
-		  subReady = sub.ready()
-		,
-	    notes = subReady? Note.find({}, { sort: { updatedAt: -1} }).fetch() : []
-	  ,
-	    notesCount = subReady? Counts.get('note_count') : null
-	  ,
-		  handleCreate = title => {
+		, subReady = sub.ready()
+		, notes = subReady? Note.find({}, { sort: { updatedAt: -1} }).fetch() : []
+	  , notesCount = subReady? Counts.get('note_count') : null
+
+      //DB OPERATIONS
+	  , handleCreate = title => {
 		    Meteor.call('note.create', title, (err, result) => {
           if (err) {
             console.log('error: ' + err.reason)
           }
         })
 		  }
-		,
-		  handleDelete = note => {
+		, handleDelete = note => {
 		    Meteor.call('note.delete', note._id, (err, result) => {
           if (err) {
             console.log('error: ' + err.reason)
           }
         })
 		  }
-		, 
-      addItemPlaceholder = notesCount === 0? "Type something and hit return to add a note..." : "New Note..."
-    , 
-      addItem = props.currentUser? <SingleFieldSubmit handleSubmit={handleCreate} placeholder={addItemPlaceholder} /> : null
-    , 
-      deleteItem = props.currentUser? true : false
-    , 
-      linkItem = props.currentUser? true : false
-    , 
-      displayEmptyListMsg = () => {
+
+      //MESSAGING
+		, addItemPlaceholder = notesCount === 0? "Type something and hit return to add a note..." : "New Note..."
+    , displayEmptyListMsg = () => {
         const
            msg =  "Please sign in or register to add notes."
         ,  msgBlock = <li className="helper-full-width help-text">{msg}</li>
@@ -49,8 +41,12 @@ export const NotesListContainer = createContainer(props => {
 
         return displayMsg? msgBlock : null
       }
-    , 
-      list = <List collection={notes} addItem={addItem} linkRoute={"noteDetails"} deleteItem={deleteItem} linkItem={linkItem} handleDelete={handleDelete} itemCount={notesCount} displayEmptyListMsg={displayEmptyListMsg} />
+
+    //LIST COMPONENT
+    , addItem = props.currentUser? <SingleFieldSubmit handleSubmit={handleCreate} placeholder={addItemPlaceholder} /> : null
+    , deleteItem = props.currentUser? true : false
+    , linkItem = props.currentUser? true : false
+    , list = <List collection={notes} addItem={addItem} linkRoute={"noteDetails"} deleteItem={deleteItem} linkItem={linkItem} handleDelete={handleDelete} itemCount={notesCount} displayEmptyListMsg={displayEmptyListMsg} />
  
 	  return {
       component: list,
