@@ -1,5 +1,4 @@
 import { createContainer } from 'meteor/react-meteor-data'
-import { FlowRouter } from 'meteor/kadira:flow-router'
 import { Meteor } from 'meteor/meteor'
 import { Note } from '/imports/collections/notes'
 import { NoteDetailsPage } from '../components/pages/note_details_page'
@@ -7,13 +6,11 @@ import { NoteDetailsPage } from '../components/pages/note_details_page'
 export const NoteDetailsContainer = createContainer(props => {
 		
 		const
-		  noteId = FlowRouter.getParam('_id')
-		,
-		  sub = Meteor.subscribe('note.details', noteId)
+		  sub = Meteor.subscribe('note.details', props.noteId)
 		,
       subReady = sub.ready()
     ,
-			note = subReady? Note.findOne({ _id: noteId }) : {}
+			note = subReady? Note.findOne({ _id: props.noteId }) : {}
 			,
 			handleUpdateNote = (collection, field, value) => {
 			  const doc = {}

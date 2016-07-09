@@ -33,9 +33,9 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/notes/:_id', {
   name: 'noteDetails',
-  action() {
+  action(params) {
     mount(AppContainer, {
-      page: props => <NoteDetailsContainer {...props} />
+      page: props => <NoteDetailsContainer {...props} noteId={params._id} />
     })
   }
 })
