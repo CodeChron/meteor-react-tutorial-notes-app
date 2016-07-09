@@ -7,7 +7,7 @@ import { NoteDetailsPage } from '../components/pages/note_details_page'
 export const NoteDetailsContainer = createContainer(props => {
 		
 		const
-		  noteId = FlowRouter.getParam('_id')
+		  noteId = props.id
 		,
 		  sub = Meteor.subscribe('note.details', noteId)
 		,
