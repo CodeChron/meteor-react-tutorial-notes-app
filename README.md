@@ -2,7 +2,7 @@
 
 ![note app views](https://cloud.githubusercontent.com/assets/819213/16540828/f38cfbee-403f-11e6-993d-683a5da0a298.png)
 
-This is a simple app that can be a great starting point for a beginner programmer who wants to take their JS knowledge to the next level.
+This is the app we built during an [introductory workshop](http://www.meetup.com/BeginnerProgrammers/events/230617884/?rv=cr1&_af=event&_af_eid=230617884&https=off) on Meteor and React JS.  This app can be a great starting point for a beginner programmer who wants to take their JS knowledge to the next level.
 
 Just [clone the repo](https://help.github.com/articles/cloning-a-repository/), and follow the comments in the code. Start at [/app/client/main.js](https://github.com/CodeChron/meteor-react-tutorial-notes-app/blob/master/app/client/main.js).  I recommend trying to build your own version of the app while reviewing the code and the comments.
 
